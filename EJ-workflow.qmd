@@ -1,0 +1,80 @@
+---
+title: "EJ Reproducibility Checks: Workflow"
+format: 
+    html: default
+editor: source
+date: today
+date-format: long
+author: Florian Oswald
+---
+
+![](img/banner.png){fig-align="top"}
+
+Workflow version: {{< var version >}}
+
+**Glossary:**
+
+| Abbreviation   | Meaning  | comments |
+|-----    | -----  | ----- |
+|EE| Editorial Express | [login](https://editorialexpress.com/e-editor/ej_login.html)
+|EJ| The Economic Journal | [web](https://res.org.uk/journals/the-economic-journal/)
+|ME| Managing Editor | Person in charge of accepting/rejecting papers at EJ
+|HT| EE Holding Tank | 
+
+## Purpose of this document
+
+This document describes the current workflow for reproducibility checks at EJ.
+
+**Input:** Replication package provided by the authors of accepted papers. 
+
+**Outputs:** 
+
+1. Email interactions with the authors during the process (via Editorial Express, EE), 
+2. clearance with authors after the checks are successfully completed (via EE), 
+3. metadata collection on each article at the shared Excel sheet (via Google Docs).
+
+**Interested Parties:**
+
+1. EJ Data Editor: {{< var de.full >}}
+2. EJ Editorial Office: {{< var eo >}}
+3. Replicators
+
+
+## Workflow in Detail
+
+We proceed chronologically. The paper has just been *conditionally accepted* by the managing author.
+
+### 1. Editorial Office: Author communication
+
+1. After conditional acceptance by the Managing Editor, {{< var eo >}} communicates with the authors of the paper, sending them instructions about how to produce the replication package and the check-list that authors should submit.
+1. {{< var eo >}} also refers the authors to the Data Editor's website at [{{< var de.website >}}]({{< var de.website >}}) for detailed instructions on how to prepare and upload the package.
+
+### 2. Data Editor ({{< var de.first >}}): Acquisition of package
+
+When the authors (re-)submit the package via EE, {{< var de.first >}} sees and downloads the paper from EE’s Holding Tank (HT). The HT includes 
+
+1. initial submissions, 
+2. revisions, and 
+3. conditionally accepted articles. 
+
+{{< var eo >}} handles the first two types, {{< var de.first >}} downloads the third type, and leaves  a note *after the article has been assigned to replicators*:
+
+![](img/step1.png)
+
+### 3. Data Editor: Logging of Metadata
+
+{{< var de.first >}} creates a new entry (*a new row*) in the shared Excel (always open with Google Docs!) including all the relevant meta-data for the article, and assigning it to a replicator:
+
+![](img/step1.png)
+
+The relevant columns to be filled by {{< var de.first >}} include:
+
+1. `MS`: Manuscript number
+1. `R`: Current round of the reproducibility checks (1,2,3,...)
+1. Author, Title, Email from the authors, ME’s initials, Data Policy
+1. Arrival date: the date at which paper arrive in HT (Feb 16 in the example above).
+1. Status: when assigning it to replicators, status should be “A” (for assigned).
+1. Checker: pick one of the available replicators
+1. Date assigned: the date in which Replicator Assignment is performed.
+
+After those fields have been entered, the Data Editor section of the spreadsheet turns white, and the replicator's part becomes green. {{< var de.first >}} usually sends a short email to the replicator indicating that a new paper has been assigned, but it is the job of the replicators to regularly check whether they have papers assigned.
