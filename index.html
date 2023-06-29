@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.340">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Florian Oswald">
+<meta name="dcterms.date" content="2023-06-29">
+
+<title>EJ Reproducibility Checks: Workflow</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="EJ-workflow_files/libs/clipboard/clipboard.min.js"></script>
+<script src="EJ-workflow_files/libs/quarto-html/quarto.js"></script>
+<script src="EJ-workflow_files/libs/quarto-html/popper.min.js"></script>
+<script src="EJ-workflow_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="EJ-workflow_files/libs/quarto-html/anchor.min.js"></script>
+<link href="EJ-workflow_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="EJ-workflow_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="EJ-workflow_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="EJ-workflow_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="EJ-workflow_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">EJ Reproducibility Checks: Workflow</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Florian Oswald </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 29, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<p><img src="img/banner.png" class="img-fluid" data-fig-align="top"> <br> <br> <strong>Version History:</strong></p>
+<p>Workflow v1: The bulk of this was the work of <a href="https://joanllull.github.io/">Joan Llull</a>.<br>
+Workflow v1.1: Minor additions by <a href="https://floswald.github.io/">Florian Oswald</a>.</p>
+<section id="purpose-of-this-document" class="level2">
+<h2 class="anchored" data-anchor-id="purpose-of-this-document">Purpose of this document</h2>
+<p>This document describes the current workflow for reproducibility checks at <code>EJ</code>.</p>
+<p><strong>Input:</strong> Replication package provided by the authors of accepted papers.</p>
+<p><strong>Outputs:</strong></p>
+<ol type="1">
+<li>Email interactions with the authors during the process (via Editorial Express, <code>EE</code>),</li>
+<li>clearance with authors after the checks are successfully completed (via <code>EE</code>),</li>
+<li>metadata collection on each article at in spreadsheet <code>SS</code> (via Google Docs).</li>
+</ol>
+<p><strong>Interested Parties:</strong></p>
+<ol type="1">
+<li>EJ Data Editor: Florian Oswald</li>
+<li>EJ Editorial Office: Antonia</li>
+<li>Replicators</li>
+</ol>
+<p><strong>Glossary:</strong></p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Abbreviation</th>
+<th>Meaning</th>
+<th>comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>EE</code></td>
+<td>Editorial Express</td>
+<td><a href="https://editorialexpress.com/e-editor/ej_login.html">login</a></td>
+</tr>
+<tr class="even">
+<td><code>EJ</code></td>
+<td>The Economic Journal</td>
+<td><a href="https://res.org.uk/journals/the-economic-journal/">web</a></td>
+</tr>
+<tr class="odd">
+<td><code>ME</code></td>
+<td>Managing Editor</td>
+<td>Person in charge of accepting/rejecting papers at <code>EJ</code></td>
+</tr>
+<tr class="even">
+<td><code>DE</code></td>
+<td>Data Editor</td>
+<td>Person in charge managing reproducibility checks at <code>EJ</code></td>
+</tr>
+<tr class="odd">
+<td><code>HT</code></td>
+<td><code>EE</code> Holding Tank</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>SS</code></td>
+<td>Shared Spreadsheet</td>
+<td>Our main spreadsheet to log all operations, Replicator availability and time use</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="workflow-in-detail" class="level2">
+<h2 class="anchored" data-anchor-id="workflow-in-detail">Workflow in Detail</h2>
+<p>We proceed chronologically. The paper has just been <em>conditionally accepted</em> by the managing author (<code>ME</code>).</p>
+<section id="step-1.-editorial-office-author-communication" class="level3">
+<h3 class="anchored" data-anchor-id="step-1.-editorial-office-author-communication">Step 1. Editorial Office: Author communication</h3>
+<ol type="1">
+<li>After conditional acceptance by the <code>ME</code>, Antonia communicates with the authors of the paper, sending them instructions about how to produce the replication package and the check-list that authors should submit.</li>
+<li>Antonia also refers the authors to the Data Editor’s website at <a href="https://ejdataeditor.github.io">https://ejdataeditor.github.io</a> for detailed instructions on how to prepare and upload the package.</li>
+</ol>
+</section>
+<section id="step-2.-data-editor-var-de.first-acquisition-of-package" class="level3">
+<h3 class="anchored" data-anchor-id="step-2.-data-editor-var-de.first-acquisition-of-package">Step 2. Data Editor (Florian): Acquisition of package</h3>
+<p>When the authors (re-)submit the package via <code>EE</code>, Florian sees and downloads the paper from EE’s Holding Tank (<code>HT</code>). The <code>HT</code> includes papers which are</p>
+<ol type="1">
+<li>initial submissions,</li>
+<li>revisions, and</li>
+<li>conditionally accepted articles.</li>
+</ol>
+<p>Antonia handles the first two types, Florian downloads the third type, and leaves a note on <code>EE</code> as shown in figure <a href="#fig-acqui">Figure&nbsp;1</a>. Notice that this happens <em>after the article has been assigned to replicators</em>!</p>
+<div id="fig-acqui" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/step1.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure&nbsp;1: Acquisition of Replication Package from <code>EE</code> <code>HT</code> on behalf of the <code>DE</code>. Notice manual addition of comment.</figcaption>
+</figure>
+</div>
+</section>
+<section id="step-3.-data-editor-logging-of-metadata-and-replicator-assignment" class="level3">
+<h3 class="anchored" data-anchor-id="step-3.-data-editor-logging-of-metadata-and-replicator-assignment">Step 3. Data Editor: Logging of Metadata and Replicator Assignment</h3>
+<p>Florian creates a new entry (<em>a new row</em>) in <code>SS</code> (always open with Google Docs!) including all the relevant meta-data for the article, and assigning it to a replicator.</p>
+<p>The relevant columns to be filled by Florian include:</p>
+<ol type="1">
+<li><code>MS</code>: Manuscript number</li>
+<li><code>R</code>: Current round of the reproducibility checks (1,2,3,…)</li>
+<li>Author, Title, Email from the authors, <code>ME</code>’s initials, Data Policy</li>
+<li>Arrival date: the date at which paper arrive in <code>HT</code> (Feb 16 in the example above).</li>
+<li>Status: when assigning it to replicators, status should be <em>A</em> (for assigned).</li>
+<li>Checker: pick one of the available replicators</li>
+<li>Date assigned: the date at which this Replicator Assignment is performed.</li>
+</ol>
+<p>After those fields have been entered, the Data Editor section of the spreadsheet turns white, and the replicator’s part turns <span style="background-color:green;">green</span>. Florian usually sends a short email to the replicator indicating that a new paper has been assigned, but it is the job of the replicators to regularly check whether they have papers assigned. This is illustrated in figure <a href="#fig-logmeta">Figure&nbsp;2</a>.</p>
+<div id="fig-logmeta" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/step2.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure&nbsp;2: <code>DE</code> logs meta data of replication package.</figcaption>
+</figure>
+</div>
+</section>
+<section id="step-4.-replicators" class="level3">
+<h3 class="anchored" data-anchor-id="step-4.-replicators">Step 4. Replicators</h3>
+<section id="replicator-availability" class="level4">
+<h4 class="anchored" data-anchor-id="replicator-availability">Replicator Availability</h4>
+<ul>
+<li>The replicators declare their <em>current</em> availability to handle papers in the corresponding section of the <code>SS</code>, by modifying column <code>Availab.</code> in this part of the spreadsheet, with the understanding that <code>Availab. = 2</code> would mean that the replicator can handle 2 packages <em>starting today</em>:</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/step3.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Replicator availability section in <code>SS</code>. Replicators edit column <code>Availab</code>.</figcaption>
+</figure>
+</div>
+<p>The spreadsheet fills in the second and third columns and determines the color of the third column. This helps Florian assigning replicators efficiently, and allows replicators to be idle if they need to be so.</p>
+</section>
+<section id="replicator-timeline" class="level4">
+<h4 class="anchored" data-anchor-id="replicator-timeline">Replicator Timeline</h4>
+<ul>
+<li>As noted above, the day a paper is assigned to a replicator, their section of the Excel file becomes <span style="background-color:green;">green</span>. Five days after the paper has been assigned to the replicator, it automatically turns <span style="background-color:yellow;">yellow</span>, and 10 days after assignment it turns <span style="background-color:red;">red</span>.</li>
+<li>Our target is for the replicator to <strong>complete any given package within 7 days</strong>. The color scheme is supposed to help replicators manage this deadline, see figure <a href="#fig-time">Figure&nbsp;3</a>.</li>
+</ul>
+<div id="fig-time" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/step4.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure&nbsp;3: Replicator Timing indicator</figcaption>
+</figure>
+</div>
+</section>
+<section id="replicator-workflow" class="level4">
+<h4 class="anchored" data-anchor-id="replicator-workflow">Replicator Workflow</h4>
+<p><em>Notice that this section is close to identical whether the replicator uses their own machine or the cloud based <code>nuvolos</code> system</em></p>
+<ol type="1">
+<li>Downloads a copy of package from <code>3. Replication Package</code> of the corresponding paper in the shared dropbox to their local drive. Notice that <code>3. Replication Package</code> is <em>read-only</em> on the dropbox, so replicators are <strong>forced</strong> to do their work outside of it.</li>
+<li>Replicator starts clock.</li>
+<li>Replicator studies the package, follows contained instructions, and tries to reproduce all results in the paper. If the contained instructions are insufficiently precise so that after 60 minutes the replicator has not gained an understanding of how certain results can be reproduced, we abort and go to the next step. This does <em>not</em> include actual runtime, which can be significantly longer.</li>
+<li>Replicator stops clock. (If program requires significant runtime, this is not billed as replicator time.)</li>
+<li>Fills in reproducibility report, stored in shared dropbox at <code>3. Replication reports</code></li>
+<li>Fills in corresponding section of <code>SS</code> with relevant data:
+<ul>
+<li>Completion date</li>
+<li>Time spent (in hours. 1.9 hours is 1h 54min): <em>This information will determine the replicators payment.</em></li>
+<li>Whether the checks were successful or not (Y/N)</li>
+<li>List the software used. Multiple softwares in comma separated list like <code>stata,fortran,matlab</code>. Do not include versions, like <code>stata 18 (MP2)</code>.</li>
+<li>The type of Data Statement that should be published with the paper. This can be one of <code>A,S,T,P</code> or the combinations <code>A;T</code>, <code>A;S</code>, <code>A;S;T</code>. The meaning of each is explained in tab <em>Codes</em> of <code>SS</code>.</li>
+</ul></li>
+<li>Replicator turns switch <code>Status</code> from <em>A</em> (assigned) to <em>B</em> (back to DE)</li>
+</ol>
+<p>In short, the Replicator fills out the part of the <code>SS</code> shown in figure <a href="#fig-checkout">Figure&nbsp;4</a>.</p>
+<div id="fig-checkout" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/rep-excel.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure&nbsp;4: Replicator fills out spreadsheet after completion of checks.</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="step-5.-data-editor-decision" class="level3">
+<h3 class="anchored" data-anchor-id="step-5.-data-editor-decision">Step 5. Data Editor Decision</h3>
+<p>Florian reviews the replicator’s report, sends a final decision to the authors, including the report, and, if revisions are needed, summarizes the content of the report. If further revisions are needed, Florian changes the status to “R” (Revision) or “M” (Minor changes), depending on whether the revisions will require sending the package back to the replicators (“R”) or not (“M”), and fills the corresponding information on the decision section:</p>
+<ul>
+<li>Date Decision taken</li>
+<li>Decision Code: <code>A</code> Accept, <code>R</code> Major Revision, <code>M</code> Minor revision and short description</li>
+<li>In case a package is resubmitted for the first time, the date of re-submission will be included to close this entry, and a new entry (<em>row</em>) will be created with revision number equal 2. If the re-submission is a minor comment, Florian changes the Status as described below but do not change the code of the Decision section. If the initial outcome of this iteration is already accept, mark the code as “A”, and introduce the current date also as re-submission date, as in figure <a href="#fig-resub">Figure&nbsp;5</a>.</li>
+</ul>
+<div id="fig-resub" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/step5.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure&nbsp;5: Acceptance Decisions of the <code>DE</code> upon resubmission.</figcaption>
+</figure>
+</div>
+<ul>
+<li>If no further revisions are needed, Florian notifies the authors accordingly and changes the status of the Excel file to “NT” (meaning ready for publication but <strong>N</strong>ot <strong>T</strong>ransferred yet). At that point, the first section of the Excel turns <span style="background-color:yellow;">yellow</span>:</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/step6.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Accepting a paper and setting to <em>Not Transferred</em> Status</figcaption>
+</figure>
+</div>
+</section>
+<section id="step-6.-editorial-office-request-zenodo-upload" class="level3">
+<h3 class="anchored" data-anchor-id="step-6.-editorial-office-request-zenodo-upload">Step 6. Editorial Office: Request <code>Zenodo</code> Upload</h3>
+<p>Antonia requests the authors to upload the package in <a href="https://zenodo.org/communities/ej-replication-repository"><code>EJ</code> community at Zenodo</a>, as indicated on the <a href="https://ejdataeditor.github.io/package.htm">DE’s website</a>.</p>
+<p><span style="background-color:pink;">TO DO</span> update DE website. this:</p>
+<blockquote class="blockquote">
+<p>Save and then Publish using the corresponding buttons that appear both at the bottom and at the page. This will notify the Data Editor who will review that the files you submitted correspond to those that went to the reproducibility checks.</p>
+</blockquote>
+<p>becomes</p>
+<blockquote class="blockquote">
+<p>Save and then Publish using the corresponding buttons that appear both at the bottom and at the page. Send an email to the Data Editor which includes the <code>md5</code> string displayed on the zenodo page of your replication package (see figure <a href="#fig-md5">Figure&nbsp;6</a> below). This string serves to check whether the files included in the package the Data Editor has accepted are <strong>exactly identical</strong> to the ones you uploaded to zenodo. It’s important to note that you must not modify your package in any way (add/remove files or make edits), or this check will fail.</p>
+</blockquote>
+<div id="fig-md5" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/md5.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure&nbsp;6: Example of <code>md5</code> string of previously published replication package for a <a href="https://zenodo.org/record/7788072">published EJ paper</a></figcaption>
+</figure>
+</div>
+</section>
+<section id="step-7.-editorial-office-return-to-me" class="level3">
+<h3 class="anchored" data-anchor-id="step-7.-editorial-office-return-to-me">Step 7. Editorial Office: Return to <code>ME</code></h3>
+<p>After the plagiarism checks, the paper is sent back to the <code>ME</code> for final acceptance, after which it is transferred to OUP for publication. When the file is transferred to OUP, it is marked in the system with a status of “P”, after which the entry turns green:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/step7.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Setting of Status to <em>P</em> (published) after transfer to the publisher OUP by Antonia</figcaption>
+</figure>
+</div>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
