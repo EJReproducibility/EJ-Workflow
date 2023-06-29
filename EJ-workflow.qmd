@@ -2,6 +2,8 @@
 title: "EJ Reproducibility Checks: Workflow"
 format: 
     html: default
+    # pdf: 
+        # mainfont: Arial
 editor: source
 date: today
 date-format: long
@@ -101,9 +103,9 @@ The spreadsheet fills in the second and third columns and determines the color o
 #### Replicator Timeline
 
 * As noted above, the day a paper is assigned to a replicator, their section of the Excel file becomes <span style="background-color:green;">green</span>. Five days after the paper has been assigned to the replicator, it automatically turns <span style="background-color:yellow;">yellow</span>, and 10 days after assignment it turns <span style="background-color:red;">red</span>. 
-* Our target is for the replicator to **complete any given package within 7 days**. The color scheme is supposed to help replicators manage this deadline.
+* Our target is for the replicator to **complete any given package within 7 days**. The color scheme is supposed to help replicators manage this deadline, see figure @fig-time.
 
-![](img/step4.png)
+![Replicator Timing indicator](img/step4.png){#fig-time}
 
 #### Replicator Workflow
 
@@ -111,7 +113,7 @@ The spreadsheet fills in the second and third columns and determines the color o
 
 1. Downloads a copy of package from `3. Replication Package` of the corresponding paper in the shared dropbox to their local drive. Notice that `3. Replication Package` is *read-only* on the dropbox, so replicators are **forced** to do their work outside of it.
 2. Replicator starts clock.
-2. Replicator studies the package, follows contained instructions, and tries to reproduce all results in the paper. If the contained instructions are insufficiently precise so that after 60 minutes the replicator has not gained an understanding of how certain results can be reproduced, we abort and go to step 3. This does *not* include actual runtime, which can be significantly longer.
+2. Replicator studies the package, follows contained instructions, and tries to reproduce all results in the paper. If the contained instructions are insufficiently precise so that after 60 minutes the replicator has not gained an understanding of how certain results can be reproduced, we abort and go to the next step. This does *not* include actual runtime, which can be significantly longer.
 3. Replicator stops clock. (If program requires significant runtime, this is not billed as replicator time.)
 3. Fills in reproducibility report, stored in shared dropbox at `3. Replication reports`
 4. Fills in corresponding section of `SS` with relevant data:
@@ -122,9 +124,9 @@ The spreadsheet fills in the second and third columns and determines the color o
     * The type of Data Statement that should be published with the paper. This can be one of `A,S,T,P` or the combinations `A;T`, `A;S`, `A;S;T`. The meaning of each is explained in tab *Codes* of `SS`.
 5. Replicator turns switch `Status` from *A* (assigned) to *B* (back to DE)
 
-In short, the Replicator fills out this part of the `SS`:
+In short, the Replicator fills out the part of the `SS` shown in figure @fig-checkout.
 
-![](img/rep-excel.png)
+![Replicator fills out spreadsheet after completion of checks.](img/rep-excel.png){#fig-checkout}
 
 ### Step 5. Data Editor Decision
 
@@ -132,13 +134,13 @@ In short, the Replicator fills out this part of the `SS`:
 
 * Date Decision taken
 * Decision Code: `A` Accept, `R` Major Revision, `M` Minor revision and short description
-* In case a  package is resubmitted for the first time, the date of re-submission will be included to close this entry, and a new entry (*row*) will be created with revision number equal 2. If the re-submission is a minor comment, {{< var de.first >}} changes the Status as described below but do not change the code of the Decision section. If the initial outcome of this iteration is already accept, mark the code as “A”, and introduce the current date also as re-submission date. 
+* In case a  package is resubmitted for the first time, the date of re-submission will be included to close this entry, and a new entry (*row*) will be created with revision number equal 2. If the re-submission is a minor comment, {{< var de.first >}} changes the Status as described below but do not change the code of the Decision section. If the initial outcome of this iteration is already accept, mark the code as “A”, and introduce the current date also as re-submission date, as in figure @fig-resub.
 
-![](img/step5.png)
+![Acceptance Decisions of the `DE` upon resubmission.](img/step5.png){#fig-resub}
 
 * If no further revisions are needed, {{< var de.first >}} notifies the authors accordingly and changes the status of the Excel file to “NT” (meaning ready for publication but **N**ot **T**ransferred yet). At that point, the first section of the Excel turns <span style="background-color:yellow;">yellow</span>:
 
-![](img/step6.png)
+![Accepting a paper and setting to *Not Transferred* Status](img/step6.png)
 
 ### Step 6. Editorial Office: Request `Zenodo` Upload
 
@@ -154,4 +156,9 @@ becomes
 
 ![Example of `md5` string of previously published replication package for a [published EJ paper](https://zenodo.org/record/7788072)](img/md5.png){#fig-md5}
 
+### Step 7. Editorial Office: Return to `ME`
 
+After the plagiarism checks, the paper is sent back to the `ME` for final acceptance, after which it is transferred to OUP for publication. When the file is transferred to OUP, it is marked in the system with a status of “P”, after which the entry turns green:
+
+
+![Setting of Status to *P* (published) after transfer to the publisher OUP by {{< var eo >}}](img/step7.png)
