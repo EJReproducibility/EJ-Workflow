@@ -17,7 +17,7 @@ author: Florian Oswald
 **Version History:**
 
 Workflow v1: The bulk of this was the work of [Joan Llull](https://joanllull.github.io/).  
-Workflow v{{< var version >}}: Minor additions by Florian Oswald.
+Workflow v{{< var version >}}: Minor additions by [Florian Oswald](https://floswald.github.io/).
 
 
 

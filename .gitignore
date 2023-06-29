@@ -1,4 +1,7 @@
 /.quarto/
+.Rhistory
 .Rproj.user
 EJ-workflow_files
 EJ-workflow.html
+EJ-workflow.pdf
+
