@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Florian Oswald">
-<meta name="dcterms.date" content="2023-06-29">
+<meta name="dcterms.date" content="2023-06-30">
 
 <title>EJ Reproducibility Checks: Workflow</title>
 <style>
@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -64,7 +98,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">June 29, 2023</p>
+      <p class="date">June 30, 2023</p>
     </div>
   </div>
   
@@ -85,12 +119,12 @@ Workflow v1.1: Minor additions by <a href="https://floswald.github.io/">Florian 
 <ol type="1">
 <li>Email interactions with the authors during the process (via Editorial Express, <code>EE</code>),</li>
 <li>clearance with authors after the checks are successfully completed (via <code>EE</code>),</li>
-<li>metadata collection on each article at in spreadsheet <code>SS</code> (via Google Docs).</li>
+<li>metadata collection on each article at in spreadsheet <code>SS</code> (via Google Docs, see below).</li>
 </ol>
 <p><strong>Interested Parties:</strong></p>
 <ol type="1">
 <li>EJ Data Editor: Florian Oswald</li>
-<li>EJ Editorial Office: Antonia</li>
+<li>EJ Publications Manager (Editorial Office): Brooke Sperry</li>
 <li>Replicators</li>
 </ol>
 <p><strong>Glossary:</strong></p>
@@ -131,7 +165,12 @@ Workflow v1.1: Minor additions by <a href="https://floswald.github.io/">Florian 
 <tr class="even">
 <td><code>SS</code></td>
 <td>Shared Spreadsheet</td>
-<td>Our main spreadsheet to log all operations, Replicator availability and time use</td>
+<td>Main spreadsheet to log all operations, Replicator availability and time use. You need an access link for that.</td>
+</tr>
+<tr class="odd">
+<td><code>DB</code></td>
+<td>Shared Dropbox folder</td>
+<td>Dropbox folder storing all replication packages. Brooke or Florian place package there, replicators download from here. <em>Read-only</em> access for everyone.</td>
 </tr>
 </tbody>
 </table>
@@ -142,8 +181,8 @@ Workflow v1.1: Minor additions by <a href="https://floswald.github.io/">Florian 
 <section id="step-1.-editorial-office-author-communication" class="level3">
 <h3 class="anchored" data-anchor-id="step-1.-editorial-office-author-communication">Step 1. Editorial Office: Author communication</h3>
 <ol type="1">
-<li>After conditional acceptance by the <code>ME</code>, Antonia communicates with the authors of the paper, sending them instructions about how to produce the replication package and the check-list that authors should submit.</li>
-<li>Antonia also refers the authors to the Data Editor’s website at <a href="https://ejdataeditor.github.io">https://ejdataeditor.github.io</a> for detailed instructions on how to prepare and upload the package.</li>
+<li>After conditional acceptance by the <code>ME</code>, Brooke communicates with the authors of the paper, sending them instructions about how to produce the replication package and the check-list that authors should submit.</li>
+<li>Brooke also refers the authors to the Data Editor’s website at <a href="https://ejdataeditor.github.io">https://ejdataeditor.github.io</a> for detailed instructions on how to prepare and upload the package.</li>
 </ol>
 </section>
 <section id="step-2.-data-editor-var-de.first-acquisition-of-package" class="level3">
@@ -154,17 +193,23 @@ Workflow v1.1: Minor additions by <a href="https://floswald.github.io/">Florian 
 <li>revisions, and</li>
 <li>conditionally accepted articles.</li>
 </ol>
-<p>Antonia handles the first two types, Florian downloads the third type, and leaves a note on <code>EE</code> as shown in figure <a href="#fig-acqui">Figure&nbsp;1</a>. Notice that this happens <em>after the article has been assigned to replicators</em>!</p>
+<p>Brooke handles the first two types, Florian downloads the third type, and leaves a note on <code>EE</code> as shown in figure <a href="#fig-acqui">Figure&nbsp;1</a>. Notice that this happens <em>after the article has been assigned to replicators</em>!</p>
 <div id="fig-acqui" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="img/step1.png" class="img-fluid figure-img"></p>
 <figcaption class="figure-caption">Figure&nbsp;1: Acquisition of Replication Package from <code>EE</code> <code>HT</code> on behalf of the <code>DE</code>. Notice manual addition of comment.</figcaption>
 </figure>
 </div>
+<p>Either Brooke or Florian places the replication package into folder <code>2. Submitted replication packages</code> of the shared dropbox <code>DB</code>, which has the following layout:</p>
+<pre><code>├── 1 Key documents
+├── 2. Submitted replication packages
+├── 3. Replication reports
+├── 4. Background documents
+└── 5. Back office Data Editor</code></pre>
 </section>
 <section id="step-3.-data-editor-logging-of-metadata-and-replicator-assignment" class="level3">
 <h3 class="anchored" data-anchor-id="step-3.-data-editor-logging-of-metadata-and-replicator-assignment">Step 3. Data Editor: Logging of Metadata and Replicator Assignment</h3>
-<p>Florian creates a new entry (<em>a new row</em>) in <code>SS</code> (always open with Google Docs!) including all the relevant meta-data for the article, and assigning it to a replicator.</p>
+<p>Florian creates a new entry (<em>a new row</em>) in <code>SS</code> (shared via link on google sheets) including all the relevant meta-data for the article, and assigning it to a replicator.</p>
 <p>The relevant columns to be filled by Florian include:</p>
 <ol type="1">
 <li><code>MS</code>: Manuscript number</li>
@@ -215,11 +260,12 @@ Workflow v1.1: Minor additions by <a href="https://floswald.github.io/">Florian 
 <h4 class="anchored" data-anchor-id="replicator-workflow">Replicator Workflow</h4>
 <p><em>Notice that this section is close to identical whether the replicator uses their own machine or the cloud based <code>nuvolos</code> system</em></p>
 <ol type="1">
-<li>Downloads a copy of package from <code>3. Replication Package</code> of the corresponding paper in the shared dropbox to their local drive. Notice that <code>3. Replication Package</code> is <em>read-only</em> on the dropbox, so replicators are <strong>forced</strong> to do their work outside of it.</li>
+<li>Navigates to shared <code>DB</code> folder <code>2. Submitted replication packages</code>, and looks for the correct submission number and Author names.</li>
+<li>From that folder, downloads a copy of package from <code>3. Replication Package</code> of the corresponding paper in the shared dropbox to their local drive. Notice that <code>3. Replication Package</code> is <em>read-only</em> on the dropbox, so replicators are <strong>forced</strong> to do their work outside of it.</li>
 <li>Replicator starts clock.</li>
 <li>Replicator studies the package, follows contained instructions, and tries to reproduce all results in the paper. If the contained instructions are insufficiently precise so that after 60 minutes the replicator has not gained an understanding of how certain results can be reproduced, we abort and go to the next step. This does <em>not</em> include actual runtime, which can be significantly longer.</li>
 <li>Replicator stops clock. (If program requires significant runtime, this is not billed as replicator time.)</li>
-<li>Fills in reproducibility report, stored in shared dropbox at <code>3. Replication reports</code></li>
+<li>Fills in reproducibility report, a template for which is stored in shared <code>DB</code> at <code>3. Replication reports</code></li>
 <li>Fills in corresponding section of <code>SS</code> with relevant data:
 <ul>
 <li>Completion date</li>
@@ -265,14 +311,14 @@ Workflow v1.1: Minor additions by <a href="https://floswald.github.io/">Florian 
 </section>
 <section id="step-6.-editorial-office-request-zenodo-upload" class="level3">
 <h3 class="anchored" data-anchor-id="step-6.-editorial-office-request-zenodo-upload">Step 6. Editorial Office: Request <code>Zenodo</code> Upload</h3>
-<p>Antonia requests the authors to upload the package in <a href="https://zenodo.org/communities/ej-replication-repository"><code>EJ</code> community at Zenodo</a>, as indicated on the <a href="https://ejdataeditor.github.io/package.htm">DE’s website</a>.</p>
+<p>Brooke requests the authors to upload the package in <a href="https://zenodo.org/communities/ej-replication-repository"><code>EJ</code> community at Zenodo</a>, as indicated on the <a href="https://ejdataeditor.github.io/package.htm">DE’s website</a>.</p>
 <p><span style="background-color:pink;">TO DO</span> update DE website. this:</p>
 <blockquote class="blockquote">
 <p>Save and then Publish using the corresponding buttons that appear both at the bottom and at the page. This will notify the Data Editor who will review that the files you submitted correspond to those that went to the reproducibility checks.</p>
 </blockquote>
 <p>becomes</p>
 <blockquote class="blockquote">
-<p>Save and then Publish using the corresponding buttons that appear both at the bottom and at the page. Send an email to the Data Editor which includes the <code>md5</code> string displayed on the zenodo page of your replication package (see figure <a href="#fig-md5">Figure&nbsp;6</a> below). This string serves to check whether the files included in the package the Data Editor has accepted are <strong>exactly identical</strong> to the ones you uploaded to zenodo. It’s important to note that you must not modify your package in any way (add/remove files or make edits), or this check will fail.</p>
+<p>Save and then Publish using the corresponding buttons that appear both at the bottom and at the page. Send an email to the Data Editor which includes the <code>md5</code> string displayed on the zenodo page of your replication package (see figure <a href="#fig-md5">Figure&nbsp;6</a> below). This string serves to check whether the files included in the package the Data Editor has accepted are <strong>exactly identical</strong> to the ones you uploaded to zenodo. It’s important to note that you must not modify your package in any way (add/remove files or make edits), or this check will fail. What you upload needs to be <strong>exactly identical</strong> to what you sent us in your final iteration.</p>
 </blockquote>
 <div id="fig-md5" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -280,6 +326,18 @@ Workflow v1.1: Minor additions by <a href="https://floswald.github.io/">Florian 
 <figcaption class="figure-caption">Figure&nbsp;6: Example of <code>md5</code> string of previously published replication package for a <a href="https://zenodo.org/record/7788072">published EJ paper</a></figcaption>
 </figure>
 </div>
+<p>We will compute our version of the <code>md5</code> string on the finally accepted version of the replication package, located here in the shared <code>DB</code>:</p>
+<pre><code>
+├── 2. Submitted replication packages
+    ├── MS_NUMBER_OF_PAPER
+        ├── 3. Replication Package</code></pre>
+<p>The computation of the <code>md5</code> on our side is straightfoward. In <code>R</code>, for example, one would run command</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Assume we navigated into the above directory in `DB`</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># can run this on command line or directly in `R`</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> Rscript <span class="at">-e</span> <span class="st">'tools::md5sum("3 Replication package.zip")'</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>         <span class="ex">3</span> Replication package.zip </span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="st">"93b6634a97954d6cbfefa56f9dff315e"</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The string <code>"93b6634a97954d6cbfefa56f9dff315e"</code> needs to match the string on zenodo, or the paper will not be released for publication.</p>
 </section>
 <section id="step-7.-editorial-office-return-to-me" class="level3">
 <h3 class="anchored" data-anchor-id="step-7.-editorial-office-return-to-me">Step 7. Editorial Office: Return to <code>ME</code></h3>
@@ -287,7 +345,7 @@ Workflow v1.1: Minor additions by <a href="https://floswald.github.io/">Florian 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/step7.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Setting of Status to <em>P</em> (published) after transfer to the publisher OUP by Antonia</figcaption>
+<figcaption class="figure-caption">Setting of Status to <em>P</em> (published) after transfer to the publisher OUP by Brooke</figcaption>
 </figure>
 </div>
 </section>
