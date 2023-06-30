@@ -69,11 +69,7 @@ When the authors (re-)submit the package via `EE`, {{< var de.first >}} sees and
 2. revisions, and 
 3. conditionally accepted articles. 
 
-{{< var eo.first >}} handles the first two types, {{< var de.first >}} downloads the third type, and leaves a note on `EE` as shown in figure @fig-acqui. Notice that this happens *after the article has been assigned to replicators*!
-
-![Acquisition of Replication Package from `EE` `HT` on behalf of the `DE`. Notice manual addition of comment.](img/step1.png){#fig-acqui}
-
-Either {{< var eo.first >}} or {{< var de.first >}} places the replication package into folder `2. Submitted replication packages` of the shared dropbox `DB`, which has the following layout:
+{{< var eo.first >}} handles the first two types, {{< var de.first >}} downloads the third type. Either {{< var eo.first >}} or {{< var de.first >}} places the replication package into folder `2. Submitted replication packages` of the shared dropbox `DB`, which has the following layout:
 
 ```
 ├── 1 Key documents
@@ -82,6 +78,12 @@ Either {{< var eo.first >}} or {{< var de.first >}} places the replication packa
 ├── 4. Background documents
 └── 5. Back office Data Editor
 ```
+
+He then leaves a note on `EE` as shown in figure @fig-acqui. Notice that this happens *after the article has been assigned to replicators*!
+
+![Acquisition of Replication Package from `EE` `HT` on behalf of the `DE`. Notice manual addition of comment.](img/step1.png){#fig-acqui}
+
+
 
 ### Step 3. Data Editor: Logging of Metadata and Replicator Assignment
 
