@@ -170,7 +170,7 @@ becomes
 
 
 
-![Example of `md5` string of previously published replication package for a [published EJ paper](https://zenodo.org/record/7788072)](img/md5.png){#fig-md5}
+![](img/md5.png){#fig-md5}
 
 We will compute our version of the `md5` string on the finally accepted version of the replication package, located here in the shared `DB`:
 
