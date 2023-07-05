@@ -2,8 +2,8 @@
 title: "EJ Reproducibility Checks: Workflow"
 format: 
     html: default
-    # pdf: 
-        # mainfont: Arial
+    odt: default
+    docx: default
 editor: source
 date: today
 date-format: long
