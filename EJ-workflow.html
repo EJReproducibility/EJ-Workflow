@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.340">
+<meta name="generator" content="quarto-1.3.310">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Florian Oswald">
-<meta name="dcterms.date" content="2023-06-30">
+<meta name="dcterms.date" content="2023-07-11">
 
 <title>EJ Reproducibility Checks: Workflow</title>
 <style>
@@ -73,10 +73,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </head>
 
-<body class="fullcontent">
+<body>
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="EJ-workflow.odt"><i class="bi bi-file"></i>OpenOffice</a></li><li><a href="EJ-workflow.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></div>
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
@@ -98,7 +99,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">June 30, 2023</p>
+      <p class="date">July 11, 2023</p>
     </div>
   </div>
   
@@ -203,7 +204,7 @@ Workflow v1.1: Minor additions by <a href="https://floswald.github.io/">Florian 
 <div id="fig-acqui" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="img/step1.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Figure&nbsp;1: Acquisition of Replication Package from <code>EE</code> <code>HT</code> on behalf of the <code>DE</code>. Notice manual addition of comment.</figcaption>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1: Acquisition of Replication Package from <code>EE</code> <code>HT</code> on behalf of the <code>DE</code>. Notice manual addition of comment.</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -224,7 +225,7 @@ Workflow v1.1: Minor additions by <a href="https://floswald.github.io/">Florian 
 <div id="fig-logmeta" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="img/step2.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Figure&nbsp;2: <code>DE</code> logs meta data of replication package.</figcaption>
+<p></p><figcaption class="figure-caption">Figure&nbsp;2: <code>DE</code> logs meta data of replication package.</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -238,7 +239,7 @@ Workflow v1.1: Minor additions by <a href="https://floswald.github.io/">Florian 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/step3.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Replicator availability section in <code>SS</code>. Replicators edit column <code>Availab</code>.</figcaption>
+<p></p><figcaption class="figure-caption">Replicator availability section in <code>SS</code>. Replicators edit column <code>Availab</code>.</figcaption><p></p>
 </figure>
 </div>
 <p>The spreadsheet fills in the second and third columns and determines the color of the third column. This helps Florian assigning replicators efficiently, and allows replicators to be idle if they need to be so.</p>
@@ -252,7 +253,7 @@ Workflow v1.1: Minor additions by <a href="https://floswald.github.io/">Florian 
 <div id="fig-time" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="img/step4.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Figure&nbsp;3: Replicator Timing indicator</figcaption>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3: Replicator Timing indicator</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -263,7 +264,16 @@ Workflow v1.1: Minor additions by <a href="https://floswald.github.io/">Florian 
 <li>Navigates to shared <code>DB</code> folder <code>2. Submitted replication packages</code>, and looks for the correct submission number and Author names.</li>
 <li>From that folder, downloads a copy of package from <code>3. Replication Package</code> of the corresponding paper in the shared dropbox to their local drive. Notice that <code>3. Replication Package</code> is <em>read-only</em> on the dropbox, so replicators are <strong>forced</strong> to do their work outside of it.</li>
 <li>Replicator starts clock.</li>
-<li>Replicator studies the package, follows contained instructions, and tries to reproduce all results in the paper. If the contained instructions are insufficiently precise so that after 60 minutes the replicator has not gained an understanding of how certain results can be reproduced, we abort and go to the next step. This does <em>not</em> include actual runtime, which can be significantly longer.</li>
+<li>Replicator studies the package.
+<ol type="1">
+<li>This will involve a very close reading of the <code>README</code> file.</li>
+<li>It will also involve a quick reading of paper and appendices:
+<ol type="1">
+<li>To get an overview of what the required outputs of the replication package are. This includes all figures, tables and other numerical results.</li>
+<li>To carefully check the data citation practice. All datasets need to be cited like any other reference (i.e.&nbsp;like a cited paper).</li>
+</ol></li>
+<li>Next, follows contained instructions, and tries to reproduce all results in the paper. If the contained instructions are insufficiently precise so that after 60 minutes the replicator has not gained an understanding of how certain results can be reproduced, we abort and go to the next step. This does <em>not</em> include actual runtime, which can be significantly longer.</li>
+</ol></li>
 <li>Replicator stops clock. (If program requires significant runtime, this is not billed as replicator time.)</li>
 <li>Fills in reproducibility report, a template for which is stored in shared <code>DB</code> at <code>3. Replication reports</code></li>
 <li>Fills in corresponding section of <code>SS</code> with relevant data:
@@ -280,9 +290,51 @@ Workflow v1.1: Minor additions by <a href="https://floswald.github.io/">Florian 
 <div id="fig-checkout" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="img/rep-excel.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Figure&nbsp;4: Replicator fills out spreadsheet after completion of checks.</figcaption>
+<p></p><figcaption class="figure-caption">Figure&nbsp;4: Replicator fills out spreadsheet after completion of checks.</figcaption><p></p>
 </figure>
 </div>
+</section>
+<section id="replicator-precise-guidelines" class="level4">
+<h4 class="anchored" data-anchor-id="replicator-precise-guidelines">Replicator: Precise Guidelines</h4>
+<p>This section provides some guidelines for what a replicator should look out for in a package, and things which may be included in their report to the <code>DE</code>.</p>
+<blockquote class="blockquote">
+<p>Any of those conditions not met means that the replicator can comment on it in their report. All conditions go under the common heading <em>making replication less cumbersome</em>.</p>
+</blockquote>
+<ol type="1">
+<li>The <code>README</code> needs to contain <em>all necessary information</em> to reproduce the findings in the paper. It should not be required to read the actual source code in order to find out which part of the code produces with part of the output.</li>
+<li>The produced output should appear in a clearly designated location, ideally a separate folder called <code>output</code>.</li>
+<li>The produced output should be easy to identify via filename. For example, figure 1 in the paper should correspond to <code>output/figure1.pdf</code> in the package.</li>
+<li>The package <em>must contain</em> all primary data sources. This is particularly important for cases like <em>we downloaded the data from www.xyz.com couple of years ago</em>. The data might no longer be available at this location, or it may be hard to find.</li>
+<li>The <code>README</code> should contain a clear description of the full data processing pipeline, starting with reading the primary data sources, processing codes and intermediate results, ending in final outputs.</li>
+<li>The replication package should save produced output to files, and not only display results on screen, because this makes it very cumbersome to find and verify single outputs in the paper.</li>
+<li>The <code>README</code> should contain a clear description of the steps one needs to perform to replicate <em>each result in the paper/appendix</em>. A single driver script (for example <code>master.do</code> or <code>run.m</code>) is convienient, however, the gold standard is a table like the following:</li>
+</ol>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Output in Paper</th>
+<th>Output in Package</th>
+<th>Script/Program to execute</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Table 1</td>
+<td><code>output/tables/table1.tex</code></td>
+<td><code>code/table1.do</code></td>
+</tr>
+<tr class="even">
+<td>Figure 1</td>
+<td><code>output/plots/figure1.pdf</code></td>
+<td><code>code/figure1.do</code></td>
+</tr>
+<tr class="odd">
+<td>Figure 2</td>
+<td><code>output/plots/figure2.pdf</code></td>
+<td><code>code/figure2.do</code></td>
+</tr>
+</tbody>
+</table>
 </section>
 </section>
 <section id="step-5.-data-editor-decision" class="level3">
@@ -296,7 +348,7 @@ Workflow v1.1: Minor additions by <a href="https://floswald.github.io/">Florian 
 <div id="fig-resub" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="img/step5.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Figure&nbsp;5: Acceptance Decisions of the <code>DE</code> upon resubmission.</figcaption>
+<p></p><figcaption class="figure-caption">Figure&nbsp;5: Acceptance Decisions of the <code>DE</code> upon resubmission.</figcaption><p></p>
 </figure>
 </div>
 <ul>
@@ -305,7 +357,7 @@ Workflow v1.1: Minor additions by <a href="https://floswald.github.io/">Florian 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/step6.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Accepting a paper and setting to <em>Not Transferred</em> Status</figcaption>
+<p></p><figcaption class="figure-caption">Accepting a paper and setting to <em>Not Transferred</em> Status</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -318,14 +370,9 @@ Workflow v1.1: Minor additions by <a href="https://floswald.github.io/">Florian 
 </blockquote>
 <p>becomes</p>
 <blockquote class="blockquote">
-<p>Save and then Publish using the corresponding buttons that appear both at the bottom and at the page. Send an email to the Data Editor which includes the <code>md5</code> string displayed on the zenodo page of your replication package (see figure <a href="#fig-md5">Figure&nbsp;6</a> below). This string serves to check whether the files included in the package the Data Editor has accepted are <strong>exactly identical</strong> to the ones you uploaded to zenodo. It’s important to note that you must not modify your package in any way (add/remove files or make edits), or this check will fail. What you upload needs to be <strong>exactly identical</strong> to what you sent us in your final iteration.</p>
+<p>Save and then Publish using the corresponding buttons that appear both at the bottom and at the page. Send an email to the Data Editor which includes the <code>md5</code> string displayed on the zenodo page of your replication package (see figure <strong>?@fig-md5</strong> below). This string serves to check whether the files included in the package the Data Editor has accepted are <strong>exactly identical</strong> to the ones you uploaded to zenodo. It’s important to note that you must not modify your package in any way (add/remove files or make edits), or this check will fail. What you upload needs to be <strong>exactly identical</strong> to what you sent us in your final iteration.</p>
 </blockquote>
-<div id="fig-md5" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="img/md5.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Figure&nbsp;6: Example of <code>md5</code> string of previously published replication package for a <a href="https://zenodo.org/record/7788072">published EJ paper</a></figcaption>
-</figure>
-</div>
+<p><img src="img/md5.png" id="fig-md5" class="img-fluid"></p>
 <p>We will compute our version of the <code>md5</code> string on the finally accepted version of the replication package, located here in the shared <code>DB</code>:</p>
 <pre><code>
 ├── 2. Submitted replication packages
@@ -345,7 +392,7 @@ Workflow v1.1: Minor additions by <a href="https://floswald.github.io/">Florian 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/step7.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Setting of Status to <em>P</em> (published) after transfer to the publisher OUP by Brooke</figcaption>
+<p></p><figcaption class="figure-caption">Setting of Status to <em>P</em> (published) after transfer to the publisher OUP by Brooke</figcaption><p></p>
 </figure>
 </div>
 </section>
