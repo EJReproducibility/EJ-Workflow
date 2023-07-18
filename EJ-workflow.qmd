@@ -2,6 +2,8 @@
 title: "EJ Reproducibility Checks: Workflow"
 format: 
     html: default
+    docx: default
+    pdf: default
 editor: source
 date: today
 date-format: long
@@ -117,7 +119,7 @@ The spreadsheet fills in the second and third columns and determines the color o
 
 #### Replicator Timeline
 
-* As noted above, the day a paper is assigned to a replicator, their section of the Excel file becomes <span style="background-color:green;">green</span>. Five days after the paper has been assigned to the replicator, it automatically turns <span style="background-color:yellow;">yellow</span>, and 10 days after assignment it turns <span style="background-color:red;">red</span>. 
+* As noted above, the day a paper is assigned to a replicator, their section of the google sheet becomes <span style="background-color:green;">green</span>. Five days after the paper has been assigned to the replicator, it automatically turns <span style="background-color:yellow;">yellow</span>, and 10 days after assignment it turns <span style="background-color:red;">red</span>. 
 * Our target is for the replicator to **complete any given package within 7 days**. The color scheme is supposed to help replicators manage this deadline, see figure @fig-time.
 
 ![Replicator Timing indicator](img/step4.png){#fig-time}
@@ -181,9 +183,9 @@ This section provides some guidelines for what a replicator should look out for 
 
 ![Acceptance Decisions of the `DE` upon resubmission.](img/step5.png){#fig-resub}
 
-* If no further revisions are needed, {{< var de.first >}} notifies the authors accordingly and changes the status of the Excel file to “NT” (meaning ready for publication but **N**ot **T**ransferred yet). At that point, the first section of the Excel turns <span style="background-color:yellow;">yellow</span>:
+* If no further revisions are needed, {{< var de.first >}} notifies the authors accordingly and changes the status of the google sheet to "AP" (acceptable package), at which point it returns to the `EO` for plagiarism checks and final communications with the authors. After this, `EO` sets the status field to `NT` (meaning ready for publication but **N**ot **T**ransferred yet). At that point, the first section of the google sheet turns <span style="background-color:yellow;">yellow</span>:
 
-![Accepting a paper and setting to *Not Transferred* Status](img/step6.png)
+![`EO` sets status to *Not Transferred* Status](img/step6.png)
 
 ### Step 6. Editorial Office: Request `Zenodo` Upload
 

@@ -3,3 +3,7 @@ project:
 
 editor: visual
 
+format:
+  html:
+    toc: true
+
