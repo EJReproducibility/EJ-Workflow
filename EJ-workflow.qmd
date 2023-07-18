@@ -56,16 +56,16 @@ This document describes the current workflow for reproducibility checks at `EJ`.
 |`SS`| Shared Spreadsheet | Main google docs spreadsheet to log all operations, Replicator availability and time use. Restricted access.|
 |`DB`| Shared Dropbox folder | Dropbox folder storing all replication packages. {{< var de.first >}} place package there, replicators download from here. *Read-only* access for everyone. |
 
-## Workflow in Detail
+**Workflow in Detail**
 
-We proceed chronologically. The paper has just been *conditionally accepted* by the managing author (`ME`).
+Let us proceed chronologically. The paper has just been *conditionally accepted* by the managing author (`ME`).
 
-### Step 1. Editorial Office: Author communication
+## Step 1. Editorial Office: Author communication
 
 1. After conditional acceptance by the `ME`, `EO` communicates with the authors of the paper, sending them instructions about how to produce the replication package and the check-list that authors should submit.
 1. `EO` also refers the authors to the Data Editor's website at [{{< var de.website >}}]({{< var de.website >}}) for detailed instructions on how to prepare and upload the package.
 
-### Step 2. Data Editor ({{< var de.first >}}): Acquisition of package
+## Step 2. Data Editor ({{< var de.first >}}): Acquisition of package
 
 When the authors (re-)submit the package via `EE`, {{< var de.first >}} sees and downloads the paper from `EE`’s Holding Tank (`HT`). The `HT` includes papers which are
 
@@ -89,7 +89,7 @@ He then leaves a note on `EE` as shown in figure @fig-acqui. Notice that this ha
 
 
 
-### Step 3. Data Editor: Logging of Metadata and Replicator Assignment
+## Step 3. Data Editor: Logging of Metadata and Replicator Assignment
 
 {{< var de.first >}} creates a new entry (*a new row*) in `SS` (shared via link on google sheets) including all the relevant meta-data for the article, and assigning it to a replicator.
 
@@ -107,9 +107,9 @@ After those fields have been entered, the Data Editor section of the spreadsheet
 
 ![`DE` logs meta data of replication package.](img/step2.png){#fig-logmeta}
 
-### Step 4. Replicators
+## Step 4. Replicators
 
-#### Replicator Availability
+### Replicator Availability
 
 * The replicators declare their *current* availability to handle papers in the corresponding section of the `SS`, by modifying column `Availab.` in this part of the spreadsheet, with the understanding that `Availab. = 2` would mean that the replicator can handle 2 packages *starting today*: 
 
@@ -117,14 +117,14 @@ After those fields have been entered, the Data Editor section of the spreadsheet
 
 The spreadsheet fills in the second and third columns and determines the color of the third column. This helps {{< var de.first >}} assigning replicators efficiently, and allows replicators to be idle if they need to be so.
 
-#### Replicator Timeline
+### Replicator Timeline
 
 * As noted above, the day a paper is assigned to a replicator, their section of the google sheet becomes <span style="background-color:green;">green</span>. Five days after the paper has been assigned to the replicator, it automatically turns <span style="background-color:yellow;">yellow</span>, and 10 days after assignment it turns <span style="background-color:red;">red</span>. 
 * Our target is for the replicator to **complete any given package within 7 days**. The color scheme is supposed to help replicators manage this deadline, see figure @fig-time.
 
 ![Replicator Timing indicator](img/step4.png){#fig-time}
 
-#### Replicator Workflow
+### Replicator Workflow
 
 *Notice that this section is close to identical whether the replicator uses their own machine or the cloud based `nuvolos` system*
 
@@ -151,7 +151,7 @@ In short, the Replicator fills out the part of the `SS` shown in figure @fig-che
 
 ![Replicator fills out spreadsheet after completion of checks.](img/rep-excel.png){#fig-checkout}
 
-#### Replicator: Precise Guidelines
+### Replicator: Precise Guidelines
 
 This section provides some guidelines for what a replicator should look out for in a package, and things which may be included in their report to the `DE`.
 
@@ -173,7 +173,7 @@ This section provides some guidelines for what a replicator should look out for 
 
 
 
-### Step 5. Data Editor Decision
+## Step 5. Data Editor Decision
 
 {{< var de.first >}} reviews the replicator's report, sends a final decision to the authors, including the report, and, if revisions are needed, summarizes the content of the report. If further revisions are needed, {{< var de.first >}} changes the status to “R” (Revision) or “M” (Minor changes), depending on whether the revisions will require sending the package back to the replicators ("R") or not ("M"), and fills the corresponding information on the decision section:
 
@@ -187,7 +187,7 @@ This section provides some guidelines for what a replicator should look out for 
 
 ![`EO` sets status to *Not Transferred* Status](img/step6.png)
 
-### Step 6. Editorial Office: Request `Zenodo` Upload
+## Step 6. Editorial Office: Request `Zenodo` Upload
 
 `EO` sends an email to the authors via `EE` (copying {{< var de.first >}} and {{< var pm.first >}}) with a request to upload the package to the [`EJ` community at Zenodo](https://zenodo.org/communities/ej-replication-repository), as indicated on the [DE's website](https://ejdataeditor.github.io/package.htm). 
 
@@ -228,7 +228,7 @@ $ Rscript -e 'tools::md5sum("3 Replication package.zip")'
 
 The string `"93b6634a97954d6cbfefa56f9dff315e"` needs to match the string on zenodo, or the paper will not be released for publication.
 
-### Step 7. Editorial Office: Return to `ME`
+## Step 7. Editorial Office: Return to `ME`
 
 After the EO completes the plagiarism checks, as per agreement with the MEs, the EO makes the final acceptance of the paper (unless the authors have changed the content of the paper during replication checks, in which case it is sent back to the ME for approval before final acceptance). After which it is transferred to Oxford University Press (OUP) for publication by the `EO`. When the file is transferred to OUP, it is marked in the system with a status of “P”, after which the entry turns green:
 
