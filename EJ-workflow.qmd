@@ -2,8 +2,6 @@
 title: "EJ Reproducibility Checks: Workflow"
 format: 
     html: default
-    odt: default
-    docx: default
 editor: source
 date: today
 date-format: long
@@ -16,8 +14,9 @@ author: Florian Oswald
 <br>
 **Version History:**
 
-Workflow v1: The bulk of this was the work of [Joan Llull](https://joanllull.github.io/).  
-Workflow v{{< var version >}}: Minor additions by [Florian Oswald](https://floswald.github.io/).
+v1: The bulk of this was the work of [Joan Llull](https://joanllull.github.io/).  
+v1.1: Minor additions by [Florian Oswald](https://floswald.github.io/).  
+v{{< var version >}}: Updates and comments from {{< var pm.full >}}
 
 
 
@@ -36,21 +35,24 @@ This document describes the current workflow for reproducibility checks at `EJ`.
 **Interested Parties:**
 
 1. EJ Data Editor: {{< var de.full >}}
-2. EJ Publications Manager (Editorial Office): {{< var eo.full >}}
-3. Replicators
+2. EJ Editorial Office. 
+    1. RES Publications Manager, {{< var pm.full >}}
+    2. Editorial Office London, {{< var eo.full >}} and colleagues.
+3. RES Replicators
 
 
 **Glossary:**
 
 | Abbreviation   | Meaning  | comments |
 |-----    | -----  | ----- |
-|`EE`| Editorial Express | [login](https://editorialexpress.com/e-editor/ej_login.html)
-|`EJ`| The Economic Journal | [web](https://res.org.uk/journals/the-economic-journal/)
-|`ME`| Managing Editor | Person in charge of accepting/rejecting papers at `EJ`
-|`DE`| Data Editor | Person in charge managing reproducibility checks at `EJ`
-|`HT`|`EE` Holding Tank | 
-|`SS`| Shared Spreadsheet | Main spreadsheet to log all operations, Replicator availability and time use. You need an access link for that.
-|`DB`| Shared Dropbox folder | Dropbox folder storing all replication packages. {{< var eo.first >}} or {{< var de.first >}} place package there, replicators download from here. *Read-only* access for everyone.
+|`EJ`| The Economic Journal | [website.](https://res.org.uk/journals/the-economic-journal/)
+|`EO`| EJ Editorial Office | Team in London which manages overall publication process  |
+|`ME`| Managing Editor | Person in charge of accepting/rejecting papers at `EJ` |
+|`DE`| Data Editor | Person in charge of managing reproducibility checks at `EJ`  |
+|`EE`| Editorial Express | online platform to handle journal publications. [login](https://editorialexpress.com/e-editor/ej_login.html) |
+|`HT`|`EE` Holding Tank | place on `EE` where all submitted/conditionally accepted papers are visible. |
+|`SS`| Shared Spreadsheet | Main google docs spreadsheet to log all operations, Replicator availability and time use. Restricted access.|
+|`DB`| Shared Dropbox folder | Dropbox folder storing all replication packages. {{< var de.first >}} place package there, replicators download from here. *Read-only* access for everyone. |
 
 ## Workflow in Detail
 
@@ -58,18 +60,18 @@ We proceed chronologically. The paper has just been *conditionally accepted* by 
 
 ### Step 1. Editorial Office: Author communication
 
-1. After conditional acceptance by the `ME`, {{< var eo.first >}} communicates with the authors of the paper, sending them instructions about how to produce the replication package and the check-list that authors should submit.
-1. {{< var eo.first >}} also refers the authors to the Data Editor's website at [{{< var de.website >}}]({{< var de.website >}}) for detailed instructions on how to prepare and upload the package.
+1. After conditional acceptance by the `ME`, `EO` communicates with the authors of the paper, sending them instructions about how to produce the replication package and the check-list that authors should submit.
+1. `EO` also refers the authors to the Data Editor's website at [{{< var de.website >}}]({{< var de.website >}}) for detailed instructions on how to prepare and upload the package.
 
 ### Step 2. Data Editor ({{< var de.first >}}): Acquisition of package
 
-When the authors (re-)submit the package via `EE`, {{< var de.first >}} sees and downloads the paper from EE’s Holding Tank (`HT`). The `HT` includes papers which are
+When the authors (re-)submit the package via `EE`, {{< var de.first >}} sees and downloads the paper from `EE`’s Holding Tank (`HT`). The `HT` includes papers which are
 
 1. initial submissions, 
 2. revisions, and 
 3. conditionally accepted articles. 
 
-{{< var eo.first >}} handles the first two types, {{< var de.first >}} downloads the third type. Either {{< var eo.first >}} or {{< var de.first >}} places the replication package into folder `2. Submitted replication packages` of the shared dropbox `DB`, which has the following layout:
+`EO` handles the first two types, {{< var de.first >}} downloads the third type. {{< var eo.first >}} checks the `HT` frequently for conditionally accepted papers, downloads their replication package and places it into folder `2. Submitted replication packages` of the shared dropbox `DB`, which has the following layout:
 
 ```
 ├── 1 Key documents
@@ -185,16 +187,20 @@ This section provides some guidelines for what a replicator should look out for 
 
 ### Step 6. Editorial Office: Request `Zenodo` Upload
 
-{{< var eo.first >}} requests the authors to upload the package in [`EJ` community at Zenodo](https://zenodo.org/communities/ej-replication-repository), as indicated on the [DE's website](https://ejdataeditor.github.io/package.htm). 
+`EO` sends an email to the authors via `EE` (copying {{< var de.first >}} and {{< var pm.first >}}) with a request to upload the package to the [`EJ` community at Zenodo](https://zenodo.org/communities/ej-replication-repository), as indicated on the [DE's website](https://ejdataeditor.github.io/package.htm). 
 
-<span style="background-color:pink;">TO DO</span> update DE website. this:
+`EO` adds an important reminder for the authors in their message:
 
->Save and then Publish using the corresponding buttons that appear both at the bottom and at the page. This will notify the Data Editor who will review that the files you submitted correspond to those that went to the reproducibility checks.
+::: {.callout-warning}
+# Important Reminder: No Further Modifications of Replication Package!
 
-becomes
+It is _very important_ that you do no longer modify the contents of your replication package. This includes adding, removing, or editing contained files and folders. The EJ Data Editor team will compare the digital fingerprint of the files you publish on `zenodo.org` against the fingerprint of the final version of your package, which the Data Editor accepted. Those digital fingerprints need to match.
 
->Save and then Publish using the corresponding buttons that appear both at the bottom and at the page. Send an email to the Data Editor which includes the `md5` string displayed on the zenodo page of your replication package (see figure @fig-md5 below). This string serves to check whether the files included in the package the Data Editor has accepted are **exactly identical** to the ones you uploaded to zenodo. It's important to note that you must not modify your package in any way (add/remove files or make edits), or this check will fail. What you upload needs to be **exactly identical** to what you sent us in your final iteration.
+:::
 
+This reminder is also on the `DE`'s website.
+
+This _digital fingerprint_ is the so-called [`md5sum`](https://en.wikipedia.org/wiki/Md5sum), which can be used to compute a unique _checksum_ of a set of data. This technology is widely used in (open source) software distribution, in order to certify integrity of downloaded software. For example, each `R` package has an associated `md5 checksum`. On `zenodo`, this is displayed as follows:
 
 
 ![](img/md5.png){#fig-md5}
@@ -222,7 +228,7 @@ The string `"93b6634a97954d6cbfefa56f9dff315e"` needs to match the string on zen
 
 ### Step 7. Editorial Office: Return to `ME`
 
-After the plagiarism checks, the paper is sent back to the `ME` for final acceptance, after which it is transferred to OUP for publication. When the file is transferred to OUP, it is marked in the system with a status of “P”, after which the entry turns green:
+After the EO completes the plagiarism checks, as per agreement with the MEs, the EO makes the final acceptance of the paper (unless the authors have changed the content of the paper during replication checks, in which case it is sent back to the ME for approval before final acceptance). After which it is transferred to Oxford University Press (OUP) for publication by the `EO`. When the file is transferred to OUP, it is marked in the system with a status of “P”, after which the entry turns green:
 
 
-![Setting of Status to *P* (published) after transfer to the publisher OUP by {{< var eo.first >}}](img/step7.png)
+![Setting of Status to *P* (published) after transfer to the publisher OUP by `EO`](img/step7.png)
