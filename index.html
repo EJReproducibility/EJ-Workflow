@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Florian Oswald">
-<meta name="dcterms.date" content="2023-07-11">
+<meta name="dcterms.date" content="2023-07-18">
 
 <title>EJ Reproducibility Checks: Workflow</title>
 <style>
@@ -73,11 +73,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </head>
 
-<body>
+<body class="fullcontent">
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="EJ-workflow.odt"><i class="bi bi-file"></i>OpenOffice</a></li><li><a href="EJ-workflow.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></div>
+
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
@@ -99,7 +98,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">July 11, 2023</p>
+      <p class="date">July 18, 2023</p>
     </div>
   </div>
   
@@ -110,8 +109,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 <p><img src="img/banner.png" class="img-fluid" data-fig-align="top"> <br> <br> <strong>Version History:</strong></p>
-<p>Workflow v1: The bulk of this was the work of <a href="https://joanllull.github.io/">Joan Llull</a>.<br>
-Workflow v1.1: Minor additions by <a href="https://floswald.github.io/">Florian Oswald</a>.</p>
+<p>v1: The bulk of this was the work of <a href="https://joanllull.github.io/">Joan Llull</a>.<br>
+v1.1: Minor additions by <a href="https://floswald.github.io/">Florian Oswald</a>.<br>
+v1.2: Updates and comments from Brooke Sperry</p>
 <section id="purpose-of-this-document" class="level2">
 <h2 class="anchored" data-anchor-id="purpose-of-this-document">Purpose of this document</h2>
 <p>This document describes the current workflow for reproducibility checks at <code>EJ</code>.</p>
@@ -125,8 +125,12 @@ Workflow v1.1: Minor additions by <a href="https://floswald.github.io/">Florian 
 <p><strong>Interested Parties:</strong></p>
 <ol type="1">
 <li>EJ Data Editor: Florian Oswald</li>
-<li>EJ Publications Manager (Editorial Office): Brooke Sperry</li>
-<li>Replicators</li>
+<li>EJ Editorial Office.
+<ol type="1">
+<li>RES Publications Manager, Brooke Sperry</li>
+<li>Editorial Office London, Nicky Cotterill and colleagues.</li>
+</ol></li>
+<li>RES Replicators</li>
 </ol>
 <p><strong>Glossary:</strong></p>
 <table class="table">
@@ -139,14 +143,14 @@ Workflow v1.1: Minor additions by <a href="https://floswald.github.io/">Florian 
 </thead>
 <tbody>
 <tr class="odd">
-<td><code>EE</code></td>
-<td>Editorial Express</td>
-<td><a href="https://editorialexpress.com/e-editor/ej_login.html">login</a></td>
-</tr>
-<tr class="even">
 <td><code>EJ</code></td>
 <td>The Economic Journal</td>
-<td><a href="https://res.org.uk/journals/the-economic-journal/">web</a></td>
+<td><a href="https://res.org.uk/journals/the-economic-journal/">website.</a></td>
+</tr>
+<tr class="even">
+<td><code>EO</code></td>
+<td>EJ Editorial Office</td>
+<td>Team in London which manages overall publication process</td>
 </tr>
 <tr class="odd">
 <td><code>ME</code></td>
@@ -156,22 +160,27 @@ Workflow v1.1: Minor additions by <a href="https://floswald.github.io/">Florian 
 <tr class="even">
 <td><code>DE</code></td>
 <td>Data Editor</td>
-<td>Person in charge managing reproducibility checks at <code>EJ</code></td>
+<td>Person in charge of managing reproducibility checks at <code>EJ</code></td>
 </tr>
 <tr class="odd">
-<td><code>HT</code></td>
-<td><code>EE</code> Holding Tank</td>
-<td></td>
+<td><code>EE</code></td>
+<td>Editorial Express</td>
+<td>online platform to handle journal publications. <a href="https://editorialexpress.com/e-editor/ej_login.html">login</a></td>
 </tr>
 <tr class="even">
-<td><code>SS</code></td>
-<td>Shared Spreadsheet</td>
-<td>Main spreadsheet to log all operations, Replicator availability and time use. You need an access link for that.</td>
+<td><code>HT</code></td>
+<td><code>EE</code> Holding Tank</td>
+<td>place on <code>EE</code> where all submitted/conditionally accepted papers are visible.</td>
 </tr>
 <tr class="odd">
+<td><code>SS</code></td>
+<td>Shared Spreadsheet</td>
+<td>Main google docs spreadsheet to log all operations, Replicator availability and time use. Restricted access.</td>
+</tr>
+<tr class="even">
 <td><code>DB</code></td>
 <td>Shared Dropbox folder</td>
-<td>Dropbox folder storing all replication packages. Brooke or Florian place package there, replicators download from here. <em>Read-only</em> access for everyone.</td>
+<td>Dropbox folder storing all replication packages. Florian place package there, replicators download from here. <em>Read-only</em> access for everyone.</td>
 </tr>
 </tbody>
 </table>
@@ -182,19 +191,19 @@ Workflow v1.1: Minor additions by <a href="https://floswald.github.io/">Florian 
 <section id="step-1.-editorial-office-author-communication" class="level3">
 <h3 class="anchored" data-anchor-id="step-1.-editorial-office-author-communication">Step 1. Editorial Office: Author communication</h3>
 <ol type="1">
-<li>After conditional acceptance by the <code>ME</code>, Brooke communicates with the authors of the paper, sending them instructions about how to produce the replication package and the check-list that authors should submit.</li>
-<li>Brooke also refers the authors to the Data Editor’s website at <a href="https://ejdataeditor.github.io">https://ejdataeditor.github.io</a> for detailed instructions on how to prepare and upload the package.</li>
+<li>After conditional acceptance by the <code>ME</code>, <code>EO</code> communicates with the authors of the paper, sending them instructions about how to produce the replication package and the check-list that authors should submit.</li>
+<li><code>EO</code> also refers the authors to the Data Editor’s website at <a href="https://ejdataeditor.github.io">https://ejdataeditor.github.io</a> for detailed instructions on how to prepare and upload the package.</li>
 </ol>
 </section>
 <section id="step-2.-data-editor-var-de.first-acquisition-of-package" class="level3">
 <h3 class="anchored" data-anchor-id="step-2.-data-editor-var-de.first-acquisition-of-package">Step 2. Data Editor (Florian): Acquisition of package</h3>
-<p>When the authors (re-)submit the package via <code>EE</code>, Florian sees and downloads the paper from EE’s Holding Tank (<code>HT</code>). The <code>HT</code> includes papers which are</p>
+<p>When the authors (re-)submit the package via <code>EE</code>, Florian sees and downloads the paper from <code>EE</code>’s Holding Tank (<code>HT</code>). The <code>HT</code> includes papers which are</p>
 <ol type="1">
 <li>initial submissions,</li>
 <li>revisions, and</li>
 <li>conditionally accepted articles.</li>
 </ol>
-<p>Brooke handles the first two types, Florian downloads the third type. Either Brooke or Florian places the replication package into folder <code>2. Submitted replication packages</code> of the shared dropbox <code>DB</code>, which has the following layout:</p>
+<p><code>EO</code> handles the first two types, Florian downloads the third type. Nicky checks the <code>HT</code> frequently for conditionally accepted papers, downloads their replication package and places it into folder <code>2. Submitted replication packages</code> of the shared dropbox <code>DB</code>, which has the following layout:</p>
 <pre><code>├── 1 Key documents
 ├── 2. Submitted replication packages
 ├── 3. Replication reports
@@ -363,15 +372,23 @@ Workflow v1.1: Minor additions by <a href="https://floswald.github.io/">Florian 
 </section>
 <section id="step-6.-editorial-office-request-zenodo-upload" class="level3">
 <h3 class="anchored" data-anchor-id="step-6.-editorial-office-request-zenodo-upload">Step 6. Editorial Office: Request <code>Zenodo</code> Upload</h3>
-<p>Brooke requests the authors to upload the package in <a href="https://zenodo.org/communities/ej-replication-repository"><code>EJ</code> community at Zenodo</a>, as indicated on the <a href="https://ejdataeditor.github.io/package.htm">DE’s website</a>.</p>
-<p><span style="background-color:pink;">TO DO</span> update DE website. this:</p>
-<blockquote class="blockquote">
-<p>Save and then Publish using the corresponding buttons that appear both at the bottom and at the page. This will notify the Data Editor who will review that the files you submitted correspond to those that went to the reproducibility checks.</p>
-</blockquote>
-<p>becomes</p>
-<blockquote class="blockquote">
-<p>Save and then Publish using the corresponding buttons that appear both at the bottom and at the page. Send an email to the Data Editor which includes the <code>md5</code> string displayed on the zenodo page of your replication package (see figure <strong>?@fig-md5</strong> below). This string serves to check whether the files included in the package the Data Editor has accepted are <strong>exactly identical</strong> to the ones you uploaded to zenodo. It’s important to note that you must not modify your package in any way (add/remove files or make edits), or this check will fail. What you upload needs to be <strong>exactly identical</strong> to what you sent us in your final iteration.</p>
-</blockquote>
+<p><code>EO</code> sends an email to the authors via <code>EE</code> (copying Florian and Brooke) with a request to upload the package to the <a href="https://zenodo.org/communities/ej-replication-repository"><code>EJ</code> community at Zenodo</a>, as indicated on the <a href="https://ejdataeditor.github.io/package.htm">DE’s website</a>.</p>
+<p><code>EO</code> adds an important reminder for the authors in their message:</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important Reminder: No Further Modifications of Replication Package!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>It is <em>very important</em> that you do no longer modify the contents of your replication package. This includes adding, removing, or editing contained files and folders. The EJ Data Editor team will compare the digital fingerprint of the files you publish on <code>zenodo.org</code> against the fingerprint of the final version of your package, which the Data Editor accepted. Those digital fingerprints need to match.</p>
+</div>
+</div>
+<p>This reminder is also on the <code>DE</code>’s website.</p>
+<p>This <em>digital fingerprint</em> is the so-called <a href="https://en.wikipedia.org/wiki/Md5sum"><code>md5sum</code></a>, which can be used to compute a unique <em>checksum</em> of a set of data. This technology is widely used in (open source) software distribution, in order to certify integrity of downloaded software. For example, each <code>R</code> package has an associated <code>md5 checksum</code>. On <code>zenodo</code>, this is displayed as follows:</p>
 <p><img src="img/md5.png" id="fig-md5" class="img-fluid"></p>
 <p>We will compute our version of the <code>md5</code> string on the finally accepted version of the replication package, located here in the shared <code>DB</code>:</p>
 <pre><code>
@@ -388,11 +405,11 @@ Workflow v1.1: Minor additions by <a href="https://floswald.github.io/">Florian 
 </section>
 <section id="step-7.-editorial-office-return-to-me" class="level3">
 <h3 class="anchored" data-anchor-id="step-7.-editorial-office-return-to-me">Step 7. Editorial Office: Return to <code>ME</code></h3>
-<p>After the plagiarism checks, the paper is sent back to the <code>ME</code> for final acceptance, after which it is transferred to OUP for publication. When the file is transferred to OUP, it is marked in the system with a status of “P”, after which the entry turns green:</p>
+<p>After the EO completes the plagiarism checks, as per agreement with the MEs, the EO makes the final acceptance of the paper (unless the authors have changed the content of the paper during replication checks, in which case it is sent back to the ME for approval before final acceptance). After which it is transferred to Oxford University Press (OUP) for publication by the <code>EO</code>. When the file is transferred to OUP, it is marked in the system with a status of “P”, after which the entry turns green:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/step7.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Setting of Status to <em>P</em> (published) after transfer to the publisher OUP by Brooke</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Setting of Status to <em>P</em> (published) after transfer to the publisher OUP by <code>EO</code></figcaption><p></p>
 </figure>
 </div>
 </section>
