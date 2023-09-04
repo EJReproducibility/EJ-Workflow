@@ -111,11 +111,24 @@ After those fields have been entered, the Data Editor section of the spreadsheet
 
 ### Replicator Availability
 
-* The replicators declare their *current* availability to handle papers in the corresponding section of the `SS`, by modifying column `Availab.` in this part of the spreadsheet, with the understanding that `Availab. = 2` would mean that the replicator can handle 2 packages *starting today*: 
+::: {.callout-note}
+# Where Do I signal my Availability?
 
-![Replicator availability section in `SS`. Replicators edit column `Availab`.](img/step3.png)
+👉 in shared spreadsheet `SS` in tab `Replicator-Availability`
 
-The spreadsheet fills in the second and third columns and determines the color of the third column. This helps {{< var de.first >}} assigning replicators efficiently, and allows replicators to be idle if they need to be so.
+:::
+
+* The replicators declare their *current* availability to handle papers in the corresponding section of the `SS` on tab `Replicator-Availability`, by modifying column `Available to take on today`. The other columns are computed automatically based on the current workload of the replicator, 
+in order to help {{< var de.first >}} assigning replicators efficiently. This also allows replicators to be idle if they need to be so.
+
+### Replicator Skills
+
+::: {.callout-note}
+# Where Do I signal my Software Skills?
+
+👉 in shared spreadsheet `SS` in tab `Replicator-Skills`
+
+:::
 
 ### Replicator Timeline
 
