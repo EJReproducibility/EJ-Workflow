@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Florian Oswald">
-<meta name="dcterms.date" content="2023-09-04">
+<meta name="dcterms.date" content="2023-10-09">
 
 <title>EJ Reproducibility Checks: Workflow</title>
 <style>
@@ -81,10 +81,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#purpose-of-this-document" id="toc-purpose-of-this-document" class="nav-link active" data-scroll-target="#purpose-of-this-document">Purpose of this document</a></li>
-  <li><a href="#step-1.-editorial-office-author-communication" id="toc-step-1.-editorial-office-author-communication" class="nav-link" data-scroll-target="#step-1.-editorial-office-author-communication">Step 1. Editorial Office: Author communication</a></li>
+  <li><a href="#new-replication-checks-process-starting-with-conditionally-accepted-papers" id="toc-new-replication-checks-process-starting-with-conditionally-accepted-papers" class="nav-link active" data-scroll-target="#new-replication-checks-process-starting-with-conditionally-accepted-papers">New Replication Checks Process Starting with Conditionally Accepted Papers</a></li>
+  <li><a href="#draft-of-conditional-acceptance-message-template" id="toc-draft-of-conditional-acceptance-message-template" class="nav-link" data-scroll-target="#draft-of-conditional-acceptance-message-template">Draft of Conditional Acceptance Message Template</a>
+  <ul class="collapse">
+  <li><a href="#step-1-submission-of-paper-via-editorial-express" id="toc-step-1-submission-of-paper-via-editorial-express" class="nav-link" data-scroll-target="#step-1-submission-of-paper-via-editorial-express">Step 1: Submission of Paper via Editorial Express</a></li>
+  <li><a href="#step-2-submission-of-replication-package-via-file-request-link" id="toc-step-2-submission-of-replication-package-via-file-request-link" class="nav-link" data-scroll-target="#step-2-submission-of-replication-package-via-file-request-link">Step 2: Submission of Replication Package via file request link</a></li>
+  <li><a href="#further-steps" id="toc-further-steps" class="nav-link" data-scroll-target="#further-steps">Further Steps</a></li>
+  </ul></li>
+  <li><a href="#purpose-of-this-document" id="toc-purpose-of-this-document" class="nav-link" data-scroll-target="#purpose-of-this-document">Purpose of this document</a></li>
+  <li><a href="#step-1.-editorial-office-acquisition-of-final-version-and-logging" id="toc-step-1.-editorial-office-acquisition-of-final-version-and-logging" class="nav-link" data-scroll-target="#step-1.-editorial-office-acquisition-of-final-version-and-logging">Step 1. Editorial Office: Acquisition of Final Version and Logging</a></li>
   <li><a href="#step-2.-data-editor-var-de.first-acquisition-of-package" id="toc-step-2.-data-editor-var-de.first-acquisition-of-package" class="nav-link" data-scroll-target="#step-2.-data-editor-var-de.first-acquisition-of-package">Step 2. Data Editor (Florian): Acquisition of package</a></li>
-  <li><a href="#step-3.-data-editor-logging-of-metadata-and-replicator-assignment" id="toc-step-3.-data-editor-logging-of-metadata-and-replicator-assignment" class="nav-link" data-scroll-target="#step-3.-data-editor-logging-of-metadata-and-replicator-assignment">Step 3. Data Editor: Logging of Metadata and Replicator Assignment</a></li>
+  <li><a href="#step-3.-data-editor-replicator-assigment" id="toc-step-3.-data-editor-replicator-assigment" class="nav-link" data-scroll-target="#step-3.-data-editor-replicator-assigment">Step 3. Data Editor: Replicator Assigment</a></li>
   <li><a href="#step-4.-replicators" id="toc-step-4.-replicators" class="nav-link" data-scroll-target="#step-4.-replicators">Step 4. Replicators</a>
   <ul class="collapse">
   <li><a href="#replicator-availability" id="toc-replicator-availability" class="nav-link" data-scroll-target="#replicator-availability">Replicator Availability</a></li>
@@ -94,7 +101,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#replicator-precise-guidelines" id="toc-replicator-precise-guidelines" class="nav-link" data-scroll-target="#replicator-precise-guidelines">Replicator: Precise Guidelines</a></li>
   </ul></li>
   <li><a href="#step-5.-data-editor-decision" id="toc-step-5.-data-editor-decision" class="nav-link" data-scroll-target="#step-5.-data-editor-decision">Step 5. Data Editor Decision</a></li>
-  <li><a href="#step-6.-editorial-office-request-zenodo-upload" id="toc-step-6.-editorial-office-request-zenodo-upload" class="nav-link" data-scroll-target="#step-6.-editorial-office-request-zenodo-upload">Step 6. Editorial Office: Request <code>Zenodo</code> Upload</a></li>
+  <li><a href="#step-6-package-resubmissions---eo-and-de" id="toc-step-6-package-resubmissions---eo-and-de" class="nav-link" data-scroll-target="#step-6-package-resubmissions---eo-and-de">Step 6: Package Resubmissions - <code>EO</code> and <code>DE</code></a></li>
+  <li><a href="#step-7.-editorial-office-request-zenodo-upload" id="toc-step-7.-editorial-office-request-zenodo-upload" class="nav-link" data-scroll-target="#step-7.-editorial-office-request-zenodo-upload">Step 7. Editorial Office: Request <code>Zenodo</code> Upload</a></li>
   <li><a href="#step-7.-editorial-office-return-to-me" id="toc-step-7.-editorial-office-return-to-me" class="nav-link" data-scroll-target="#step-7.-editorial-office-return-to-me">Step 7. Editorial Office: Return to <code>ME</code></a></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="EJ-workflow.docx"><i class="bi bi-file-word"></i>MS Word</a></li><li><a href="EJ-workflow.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
@@ -120,7 +128,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 4, 2023</p>
+      <p class="date">October 9, 2023</p>
     </div>
   </div>
   
@@ -133,20 +141,95 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="img/banner.png" class="img-fluid" data-fig-align="top"> <br> <br> <strong>Version History:</strong></p>
 <p>v1: The bulk of this was the work of <a href="https://joanllull.github.io/">Joan Llull</a>.<br>
 v1.1: Minor additions by <a href="https://floswald.github.io/">Florian Oswald</a>.<br>
-v1.2: Updates and comments from Brooke Sperry</p>
+v1.2: Updates and comments from Brooke Sperry<br>
+v1.3: Proposition for unique EJ + EctJ workflow by Florian</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Executive Summary
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>I propose:</p>
+<ol type="1">
+<li>the exact same wording of data policy for EJ and EctJ. I don’t see any particular reason why they should differ.</li>
+<li>the exact same process of reproducibility checks for both journals.</li>
+<li>to keep two different dropboxes to collect packages.</li>
+<li>to keep two separate email addresses <code>ejdataeditor@gmail.com</code> or <code>ectjdataeditor@gmail.com</code></li>
+<li>to handle all communications via those emails instead of <code>EE</code>. I can upload histories to <code>EE</code> correspondance folder upon request.</li>
+<li>to have a <em>unique</em> RES Data Editor website instead of 2 almost identical ones for each journal. There is a small change to make in the zenodo upload section, where we need to say <em>if you publish with EJ, go to the EJ community, if you publish with EctJ, go to the EctJ community</em></li>
+<li>to have a unique google spreadsheet to log metadata (adding a column <code>journal</code> with values <code>EJ</code> or <code>EctJ</code> to differentiate)</li>
+<li>to amend initiation of reproducibility checks process via dropbox file request link (see below) - starting from templated <em>conditional acceptance</em> message of managing editor - see proposition of new template below.</li>
+</ol>
+</div>
+</div>
+<section id="new-replication-checks-process-starting-with-conditionally-accepted-papers" class="level2">
+<h2 class="anchored" data-anchor-id="new-replication-checks-process-starting-with-conditionally-accepted-papers">New Replication Checks Process Starting with Conditionally Accepted Papers</h2>
+<ol type="1">
+<li><code>ME</code> sends <em>conditional acceptance</em> message.</li>
+<li><code>ME</code> message contains following info:
+<ol type="1">
+<li>Authors must submit paper, appendix and signed checklist (<a href="https://bit.ly/3Qa0HW5">https://bit.ly/3Qa0HW5</a> is out of sync) via <code>EE</code>. After submission on EE, they must submit a replication package via dropbox link sent by DE, where package is structured as in https://ejdataeditor.github.io/.</li>
+<li>Paper and appendix via <code>EE</code> named in format <code>MSXXXXXXXX-main-YYYYMMDD.tex</code>, <code>MSXXXXXXXX-appendix-YYYYMMDD.tex</code>, <code>MSXXXXXXXX-main-YYYYMMDD.pdf</code>, <code>MSXXXXXXXX-appendix-YYYYMMDD.pdf</code>. adhering to certain formatting rules: <a href="https://bit.ly/3g2YBaB">https://bit.ly/3g2YBaB</a>, and following the guidelines (<a href="https://bit.ly/3ivH38d">https://bit.ly/3ivH38d</a> is out of sync). Having those files on <code>EE</code> serves the purpose of having a master version of the accepted paper on record, against we can check the paper after potentially several rounds of replication checks.</li>
+</ol></li>
+</ol>
+<p>to do:</p>
+<ol type="1">
+<li>Update Guidelines (<a href="https://bit.ly/3ivH38d">https://bit.ly/3ivH38d</a></li>
+<li>Update Checklist <a href="https://bit.ly/3Qa0HW5">https://bit.ly/3Qa0HW5</a></li>
+<li>Update conditional acceptance template messages of all <code>ME</code>s</li>
+<li>Do exactly the same for <code>EctJ</code> <code>ME</code>s.</li>
+</ol>
+</section>
+<section id="draft-of-conditional-acceptance-message-template" class="level2">
+<h2 class="anchored" data-anchor-id="draft-of-conditional-acceptance-message-template">Draft of Conditional Acceptance Message Template</h2>
+<p>Dear Author:</p>
+<p>I am pleased to inform you that I have decided to “conditionally accept” your submission, MS 20220160, titled “Strategic Campaign Communication: Evidence from 30,000 Candidate Manifestos” for publication in the Economic Journal.</p>
+<p>This means that your paper has been accepted for publication on the condition that it passes the applicable checks (reproducibility of results and anti-plagiarism).</p>
+<p>[SPACE FOR PERSONAL MESSAGES TO AUTHORS]</p>
+<p>Your final submission will be checked with anti-plagiarism software. At this stage, you are required to submit all relevant files for production and replication, accompanying files such as material for the online appendix and any data and data documentation files, as per our replication policy at: https://academic.oup.com/ej/pages/General_Instructions#data.</p>
+<p>Next, I am asking you to submit the final version of all your files in two consecutive steps: Your paper and any appendices together with a signed checklist via Editorial Express, and your replication package via a file request link directly to our Data Editor (see below).</p>
+<section id="step-1-submission-of-paper-via-editorial-express" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-submission-of-paper-via-editorial-express">Step 1: Submission of Paper via Editorial Express</h3>
+<p>On Editorial Express, you should submit a single zip file containing three objects: two directories and one pdf file which you signed, as follows.</p>
+<ol type="1">
+<li><code>1-paper</code> : A directory containing all source code needed to compile your paper named in the appropriate way. In particular, please include <code>MSXXXXXXXX-main-YYYYMMDD.tex</code> and <code>MSXXXXXXXX-main-YYYYMMDD.pdf</code>, as well as all required input files (graphs and tables etc.) - <code>MSXXXXXXXX</code> being your manuscript number, and <code>YYYYMMDD</code> standing for the date of final submission in ISO format.</li>
+<li><code>2-appendix</code> : Directory containing sources for appendices - if applicable - following the same naming convention as above.</li>
+<li><code>checklist.pdf</code> : the signed checklist https://bit.ly/3Qa0HW5 .</li>
+</ol>
+<p>In preparing the final version of your paper, please consult the instructions for authors at: <a href="https://bit.ly/3ivH38d">https://bit.ly/3ivH38d</a> to make sure your final submission conforms to the journal’s requirements.</p>
+<p>For creating manuscripts in LaTex, The Economic Journal strongly recommends the use of its TeX template which is downloadable at: [h9https://bit.ly/3g2YBaB)]</p>
+</section>
+<section id="step-2-submission-of-replication-package-via-file-request-link" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-submission-of-replication-package-via-file-request-link">Step 2: Submission of Replication Package via file request link</h3>
+<p><em>After</em> having received your final version of paper and appendices together with the signed checklist on Editorial Express (Step 1 above), our data editor will initiate the replication checks process by sending you a file request link, where you will be able to upload your replication package, as soon as your are ready to do so.</p>
+<p><em>Before</em> you start to prepare your replication package, please consult the EJ Data Editor website for comprehensive guidance and step-by-step instructions: <a href="https://ejdataeditor.github.io">https://ejdataeditor.github.io</a>.</p>
+</section>
+<section id="further-steps" class="level3">
+<h3 class="anchored" data-anchor-id="further-steps">Further Steps</h3>
+<p>Once I have received all supporting documents along with confirmation that the paper has passed the appropriate checks, I will formally accept the paper for publication. At which point, the paper can be listed as “forthcoming” and your files will be sent to Oxford University Press for production.</p>
+<p>Now is also a good time to update the information on your website about the paper and inform the authors you are, or will be, citing in the paper. It is now in your and our best interest to increase the impact of your paper as much as possible.</p>
+<p>Thank you very much for your contribution to the Economic Journal. I look forward to seeing it in print.</p>
+<p>Sincerely,</p>
+<p>Your Manging Editor</p>
+</section>
+</section>
 <section id="purpose-of-this-document" class="level2">
 <h2 class="anchored" data-anchor-id="purpose-of-this-document">Purpose of this document</h2>
-<p>This document describes the current workflow for reproducibility checks at <code>EJ</code>.</p>
+<p>This document describes the current workflow for reproducibility checks at <code>EJ</code> and <code>EctJ</code></p>
 <p><strong>Input:</strong> Replication package provided by the authors of accepted papers.</p>
 <p><strong>Outputs:</strong></p>
 <ol type="1">
-<li>Email interactions with the authors during the process (via Editorial Express, <code>EE</code>),</li>
-<li>clearance with authors after the checks are successfully completed (via <code>EE</code>),</li>
+<li>Email interactions with the authors during the process,</li>
+<li>clearance with authors after the checks are successfully completed</li>
 <li>metadata collection on each article at in spreadsheet <code>SS</code> (via Google Docs, see below).</li>
 </ol>
 <p><strong>Interested Parties:</strong></p>
 <ol type="1">
-<li>EJ Data Editor: Florian Oswald</li>
+<li>RES Data Editor: Florian Oswald</li>
 <li>EJ Editorial Office.
 <ol type="1">
 <li>RES Publications Manager, Brooke Sperry</li>
@@ -170,36 +253,41 @@ v1.2: Updates and comments from Brooke Sperry</p>
 <td><a href="https://res.org.uk/journals/the-economic-journal/">website.</a></td>
 </tr>
 <tr class="even">
+<td><code>EctJ</code></td>
+<td>The Econometrics Journal</td>
+<td><a href="https://onlinelibrary.wiley.com/journal/1368423x">website.</a></td>
+</tr>
+<tr class="odd">
 <td><code>EO</code></td>
 <td>EJ Editorial Office</td>
 <td>Team in London which manages overall publication process</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><code>ME</code></td>
 <td>Managing Editor</td>
 <td>Person in charge of accepting/rejecting papers at <code>EJ</code></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><code>DE</code></td>
 <td>Data Editor</td>
 <td>Person in charge of managing reproducibility checks at <code>EJ</code></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><code>EE</code></td>
 <td>Editorial Express</td>
 <td>online platform to handle journal publications. <a href="https://editorialexpress.com/e-editor/ej_login.html">login</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><code>HT</code></td>
 <td><code>EE</code> Holding Tank</td>
 <td>place on <code>EE</code> where all submitted/conditionally accepted papers are visible.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><code>SS</code></td>
 <td>Shared Spreadsheet</td>
 <td>Main google docs spreadsheet to log all operations, Replicator availability and time use. Restricted access.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><code>DB</code></td>
 <td>Shared Dropbox folder</td>
 <td>Dropbox folder storing all replication packages. Florian place package there, replicators download from here. <em>Read-only</em> access for everyone.</td>
@@ -209,44 +297,37 @@ v1.2: Updates and comments from Brooke Sperry</p>
 <p><strong>Workflow in Detail</strong></p>
 <p>Let us proceed chronologically. The paper has just been <em>conditionally accepted</em> by the managing author (<code>ME</code>).</p>
 </section>
-<section id="step-1.-editorial-office-author-communication" class="level2">
-<h2 class="anchored" data-anchor-id="step-1.-editorial-office-author-communication">Step 1. Editorial Office: Author communication</h2>
+<section id="step-1.-editorial-office-acquisition-of-final-version-and-logging" class="level2">
+<h2 class="anchored" data-anchor-id="step-1.-editorial-office-acquisition-of-final-version-and-logging">Step 1. Editorial Office: Acquisition of Final Version and Logging</h2>
 <ol type="1">
-<li>After conditional acceptance by the <code>ME</code>, <code>EO</code> communicates with the authors of the paper, sending them instructions about how to produce the replication package and the check-list that authors should submit.</li>
-<li><code>EO</code> also refers the authors to the Data Editor’s website at <a href="https://ejdataeditor.github.io">https://ejdataeditor.github.io</a> for detailed instructions on how to prepare and upload the package.</li>
+<li>After conditional acceptance by the <code>ME</code>, <code>EO</code> waits on <code>HT</code> of <code>EE</code> until the required zip file arrives. See above for what the required contents are. (<em>paper, appendices and checklist</em>). If contents are missing, cycle back to authors until correct and signed.</li>
+<li>After successful arrival on <code>EE</code>, <code>EO</code> logs the paper’s metadata in our shared googlesheet <code>SS</code>, filling all fields as shown in figure <a href="#fig-logmetadata">Figure&nbsp;1</a> (leaving the rest empty). Upon turning blue, the googlesheet will send an automated message to the Data Editor (Florian) - no further action on behalf of <code>EO</code> required.</li>
 </ol>
-</section>
-<section id="step-2.-data-editor-var-de.first-acquisition-of-package" class="level2">
-<h2 class="anchored" data-anchor-id="step-2.-data-editor-var-de.first-acquisition-of-package">Step 2. Data Editor (Florian): Acquisition of package</h2>
-<p>When the authors (re-)submit the package via <code>EE</code>, Florian sees and downloads the paper from <code>EE</code>’s Holding Tank (<code>HT</code>). The <code>HT</code> includes papers which are</p>
-<ol type="1">
-<li>initial submissions,</li>
-<li>revisions, and</li>
-<li>conditionally accepted articles.</li>
-</ol>
-<p><code>EO</code> handles the first two types, Florian downloads the third type. Nicky checks the <code>HT</code> frequently for conditionally accepted papers, downloads their replication package and places it into folder <code>2. Submitted replication packages</code> of the shared dropbox <code>DB</code>, which has the following layout:</p>
-<pre><code>├── 1 Key documents
-├── 2. Submitted replication packages
-├── 3. Replication reports
-├── 4. Background documents
-└── 5. Back office Data Editor</code></pre>
-<p>He then leaves a note on <code>EE</code> as shown in figure <a href="#fig-acqui">Figure&nbsp;1</a>. Notice that this happens <em>after the article has been assigned to replicators</em>!</p>
-<div id="fig-acqui" class="quarto-figure quarto-figure-center anchored">
+<div id="fig-logmetadata" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="img/step1.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;1: Acquisition of Replication Package from <code>EE</code> <code>HT</code> on behalf of the <code>DE</code>. Notice manual addition of comment.</figcaption><p></p>
+<p><img src="img/step0.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1: <code>EO</code> logs meta data of replication package.</figcaption><p></p>
 </figure>
 </div>
 </section>
-<section id="step-3.-data-editor-logging-of-metadata-and-replicator-assignment" class="level2">
-<h2 class="anchored" data-anchor-id="step-3.-data-editor-logging-of-metadata-and-replicator-assignment">Step 3. Data Editor: Logging of Metadata and Replicator Assignment</h2>
-<p>Florian creates a new entry (<em>a new row</em>) in <code>SS</code> (shared via link on google sheets) including all the relevant meta-data for the article, and assigning it to a replicator.</p>
-<p>The relevant columns to be filled by Florian include:</p>
+<section id="step-2.-data-editor-var-de.first-acquisition-of-package" class="level2">
+<h2 class="anchored" data-anchor-id="step-2.-data-editor-var-de.first-acquisition-of-package">Step 2. Data Editor (Florian): Acquisition of package</h2>
+<p>Florian receives an automated message that a new paper has arrived to be checked for reproducibility. He creates a new folder inside the shared dropbox folder <code>EJ-2-submitted-replication-packages</code> (<code>EctJ-2-submitted-replication-packages</code> for <code>EctJ</code>) named with the main author’s last name and their MS number, and <em>sends a file request link to the author via email</em>.</p>
+<p>as a reminder, the dropbox folder structure is as follows:</p>
+<pre><code>.
+├── EJ-1-key-documents
+├── EJ-2-submitted-replication-packages
+├── EJ-3-replication-reports
+├── EJ-4-background-documents
+├── EJ-5-back-office-data-editor
+├── EJ-6-good-to-go
+└── EJ-7-published-packages</code></pre>
+<p><em>After</em> successful arrival of the package, Florian logs <code>arrival date package</code> in the <code>SS</code>.</p>
+</section>
+<section id="step-3.-data-editor-replicator-assigment" class="level2">
+<h2 class="anchored" data-anchor-id="step-3.-data-editor-replicator-assigment">Step 3. Data Editor: Replicator Assigment</h2>
+<p>The DE picks a replicator by setting the following fields on the spreadsheet:</p>
 <ol type="1">
-<li><code>MS</code>: Manuscript number</li>
-<li><code>R</code>: Current round of the reproducibility checks (1,2,3,…)</li>
-<li>Author, Title, Email from the authors, <code>ME</code>’s initials, Data Policy</li>
-<li>Arrival date: the date at which paper arrive in <code>HT</code> (Feb 16 in the example above).</li>
 <li>Status: when assigning it to replicators, status should be <em>A</em> (for assigned).</li>
 <li>Checker: pick one of the available replicators</li>
 <li>Date assigned: the date at which this Replicator Assignment is performed.</li>
@@ -256,6 +337,13 @@ v1.2: Updates and comments from Brooke Sperry</p>
 <figure class="figure">
 <p><img src="img/step2.png" class="img-fluid figure-img"></p>
 <p></p><figcaption class="figure-caption">Figure&nbsp;2: <code>DE</code> logs meta data of replication package.</figcaption><p></p>
+</figure>
+</div>
+<p>He then leaves a note on <code>EE</code> as shown in figure <a href="#fig-acqui">Figure&nbsp;3</a>. Notice that this happens <em>after the article has been assigned to replicators</em>!</p>
+<div id="fig-acqui" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/step1.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3: Acquisition of Replication Package from <code>EE</code> <code>HT</code> on behalf of the <code>DE</code>. Notice manual addition of comment.</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -300,12 +388,12 @@ Where Do I signal my Software Skills?
 <h3 class="anchored" data-anchor-id="replicator-timeline">Replicator Timeline</h3>
 <ul>
 <li>As noted above, the day a paper is assigned to a replicator, their section of the google sheet becomes <span style="background-color:green;">green</span>. Five days after the paper has been assigned to the replicator, it automatically turns <span style="background-color:yellow;">yellow</span>, and 10 days after assignment it turns <span style="background-color:red;">red</span>.</li>
-<li>Our target is for the replicator to <strong>complete any given package within 7 days</strong>. The color scheme is supposed to help replicators manage this deadline, see figure <a href="#fig-time">Figure&nbsp;3</a>.</li>
+<li>Our target is for the replicator to <strong>complete any given package within 7 days</strong>. The color scheme is supposed to help replicators manage this deadline, see figure <a href="#fig-time">Figure&nbsp;4</a>.</li>
 </ul>
 <div id="fig-time" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="img/step4.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3: Replicator Timing indicator</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;4: Replicator Timing indicator</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -313,8 +401,8 @@ Where Do I signal my Software Skills?
 <h3 class="anchored" data-anchor-id="replicator-workflow">Replicator Workflow</h3>
 <p><em>Notice that this section is close to identical whether the replicator uses their own machine or the cloud based <code>nuvolos</code> system</em></p>
 <ol type="1">
-<li>Navigates to shared <code>DB</code> folder <code>2. Submitted replication packages</code>, and looks for the correct submission number and Author names.</li>
-<li>From that folder, downloads a copy of package from <code>3. Replication Package</code> of the corresponding paper in the shared dropbox to their local drive. Notice that <code>3. Replication Package</code> is <em>read-only</em> on the dropbox, so replicators are <strong>forced</strong> to do their work outside of it.</li>
+<li>Navigates to shared <code>DB</code> folder <code>EJ-2-submitted-replication-packages</code>, and looks for the correct submission number and Author names.</li>
+<li>From that folder, downloads a copy of entire package to their local drive. Notice that <code>EJ-2-submitted-replication-packages</code> is <em>read-only</em> on the dropbox, so replicators are <strong>forced</strong> to do their work outside of it.</li>
 <li>Replicator starts clock.</li>
 <li>Replicator studies the package.
 <ol type="1">
@@ -338,11 +426,11 @@ Where Do I signal my Software Skills?
 </ul></li>
 <li>Replicator turns switch <code>Status</code> from <em>A</em> (assigned) to <em>B</em> (back to DE)</li>
 </ol>
-<p>In short, the Replicator fills out the part of the <code>SS</code> shown in figure <a href="#fig-checkout">Figure&nbsp;4</a>.</p>
+<p>In short, the Replicator fills out the part of the <code>SS</code> shown in figure <a href="#fig-checkout">Figure&nbsp;5</a>.</p>
 <div id="fig-checkout" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="img/rep-excel.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;4: Replicator fills out spreadsheet after completion of checks.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;5: Replicator fills out spreadsheet after completion of checks.</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -395,16 +483,47 @@ Where Do I signal my Software Skills?
 <ul>
 <li>Date Decision taken</li>
 <li>Decision Code: <code>A</code> Accept, <code>R</code> Major Revision, <code>M</code> Minor revision and short description</li>
-<li>In case a package is resubmitted for the first time, the date of re-submission will be included to close this entry, and a new entry (<em>row</em>) will be created with revision number equal 2. If the re-submission is a minor comment, Florian changes the Status as described below but do not change the code of the Decision section. If the initial outcome of this iteration is already accept, mark the code as “A”, and introduce the current date also as re-submission date, as in figure <a href="#fig-resub">Figure&nbsp;5</a>.</li>
+</ul>
+</section>
+<section id="step-6-package-resubmissions---eo-and-de" class="level2">
+<h2 class="anchored" data-anchor-id="step-6-package-resubmissions---eo-and-de">Step 6: Package Resubmissions - <code>EO</code> and <code>DE</code></h2>
+<p>Messages from the <code>DE</code> to authors inviting changes to the package and resubmission contain two points:</p>
+<ol type="1">
+<li>A letter to the Data Editor in pdf format <em>must be submitted to EE</em>, clearly addressing all points raised.</li>
+<li><em>After</em> the letter is successfully received on <code>EE</code>, the author will receive a new file request link to submit the revised package.</li>
+</ol>
+<p><strong>Internally</strong>, we follow the same steps as with first time submissions:</p>
+<ol type="1">
+<li><code>EO</code> logs the return of package upon receiving the letter on <code>EE</code> by copying the first 9 cells of the rejected version of the paper, and pasting it at the bottom of the spreadsheet, incrementing the <code>Round</code> field by 1, and logging the correct <code>arrival date EE</code>, as shown in figure <a href="#fig-revision">Figure&nbsp;6</a>.</li>
+<li>The <code>DE</code> is again alerted automatically and sends the file request link to the authors.</li>
+</ol>
+<div id="fig-revision" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/step-revision.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;6: <code>EO</code> logs resubmitted paper</figcaption><p></p>
+</figure>
+</div>
+<p>The <code>DE</code> takes care of logging the fields concerning resubmission date:</p>
+<ul>
+<li>In case a package is resubmitted for the first time, the date of re-submission will be included to close this entry, and a new entry (<em>row</em>) will be created with revision number equal 2. If the re-submission is a minor comment, Florian changes the Status as described below but do not change the code of the Decision section. If the initial outcome of this iteration is already accept, mark the code as “A”, and introduce the current date also as re-submission date, as in figure <a href="#fig-resub">Figure&nbsp;7</a>.</li>
 </ul>
 <div id="fig-resub" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="img/step5.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;5: Acceptance Decisions of the <code>DE</code> upon resubmission.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;7: Acceptance Decisions of the <code>DE</code> upon resubmission.</figcaption><p></p>
 </figure>
 </div>
 <ul>
-<li>If no further revisions are needed, Florian notifies the authors accordingly and changes the status of the google sheet to “AP” (acceptable package), at which point it returns to the <code>EO</code> for plagiarism checks and final communications with the authors. After this, <code>EO</code> sets the status field to <code>NT</code> (meaning ready for publication but <strong>N</strong>ot <strong>T</strong>ransferred yet). At that point, the first section of the google sheet turns <span style="background-color:yellow;">yellow</span>:</li>
+<li>If no further revisions are needed, Florian notifies the authors accordingly and changes the status of the google sheet to “AP” (acceptable package).</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/step5.5.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption"><code>DE</code> sets status to <em>Acceptable Package</em></figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li>Next, the package returns to the <code>EO</code> for plagiarism checks and final communications with the authors. After this, <code>EO</code> sets the status field to <code>NT</code> (meaning ready for publication but <strong>N</strong>ot <strong>T</strong>ransferred yet). At that point, the first section of the google sheet turns <span style="background-color:yellow;">yellow</span>:</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -413,9 +532,9 @@ Where Do I signal my Software Skills?
 </figure>
 </div>
 </section>
-<section id="step-6.-editorial-office-request-zenodo-upload" class="level2">
-<h2 class="anchored" data-anchor-id="step-6.-editorial-office-request-zenodo-upload">Step 6. Editorial Office: Request <code>Zenodo</code> Upload</h2>
-<p><code>EO</code> sends an email to the authors via <code>EE</code> (copying Florian and Brooke) with a request to upload the package to the <a href="https://zenodo.org/communities/ej-replication-repository"><code>EJ</code> community at Zenodo</a>, as indicated on the <a href="https://ejdataeditor.github.io/package.htm">DE’s website</a>.</p>
+<section id="step-7.-editorial-office-request-zenodo-upload" class="level2">
+<h2 class="anchored" data-anchor-id="step-7.-editorial-office-request-zenodo-upload">Step 7. Editorial Office: Request <code>Zenodo</code> Upload</h2>
+<p><code>EO</code> sends an email to the authors via <code>EE</code> (copying Florian and Brooke) with a request to upload the package to the <a href="https://zenodo.org/communities/ej-replication-repository"><code>EJ</code> community at Zenodo</a>, as indicated on the <a href="https://ejdataeditor.github.io/package">DE’s website</a>.</p>
 <p><code>EO</code> adds an important reminder for the authors in their message:</p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -435,16 +554,27 @@ Important Reminder: No Further Modifications of Replication Package!
 <p><img src="img/md5.png" id="fig-md5" class="img-fluid"></p>
 <p>We will compute our version of the <code>md5</code> string on the finally accepted version of the replication package, located here in the shared <code>DB</code>:</p>
 <pre><code>
-├── 2. Submitted replication packages
-    ├── MS_NUMBER_OF_PAPER
-        ├── 3. Replication Package</code></pre>
-<p>The computation of the <code>md5</code> on our side is straightfoward. In <code>R</code>, for example, one would run command</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Assume we navigated into the above directory in `DB`</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># can run this on command line or directly in `R`</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> Rscript <span class="at">-e</span> <span class="st">'tools::md5sum("3 Replication package.zip")'</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>         <span class="ex">3</span> Replication package.zip </span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="st">"93b6634a97954d6cbfefa56f9dff315e"</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+├── EJ-2-submitted-replication-packages
+    ├── Lastname-XXXXXXXX-R3
+        ├── 3-replication-package.zip</code></pre>
+<p>The computation of the <code>md5</code> on our side is straightfoward. On a Linux command line one would run</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> md5sum 3-replication-package.zip</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">93b6634a97954d6cbfefa56f9dff315e</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>The string <code>"93b6634a97954d6cbfefa56f9dff315e"</code> needs to match the string on zenodo, or the paper will not be released for publication.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Importance of initial folder structure
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This only works if the authors created the zip file on their computer, that is, if the archive <code>3-replication-package.zip</code> was part of their last submitted package. If, for instance, they submit <code>3-replication-package</code> (<strong>no zip!!</strong>), and we create the zip archive for them, the md5 sum <strong>will be different</strong>!</p>
+</div>
+</div>
 </section>
 <section id="step-7.-editorial-office-return-to-me" class="level2">
 <h2 class="anchored" data-anchor-id="step-7.-editorial-office-return-to-me">Step 7. Editorial Office: Return to <code>ME</code></h2>
