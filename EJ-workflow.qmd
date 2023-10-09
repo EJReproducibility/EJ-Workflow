@@ -18,25 +18,109 @@ author: Florian Oswald
 
 v1: The bulk of this was the work of [Joan Llull](https://joanllull.github.io/).  
 v1.1: Minor additions by [Florian Oswald](https://floswald.github.io/).  
-v{{< var version >}}: Updates and comments from {{< var pm.full >}}
+v1.2: Updates and comments from {{< var pm.full >}}  
+v{{< var version >}}: Proposition for unique EJ + EctJ workflow by Florian
 
+::: {.callout-note}
+
+# too long; didn't read (tl;dr)
+
+I propose:
+
+1. the exact same wording of data policy for EJ and EctJ. I don't see any particular reason why they should differ.
+2. the exact same process of reproducibility checks for both journals.
+3. to keep two different dropboxes to collect packages.
+3. to keep two separate email addresses `ejdataeditor@gmail.com` or `ectjdataeditor@gmail.com`
+3. to handle all communications via those emails instead of `EE`. I can upload histories to `EE` correspondance folder upon request.
+3. to have a _unique_ RES Data Editor website instead of 2 almost identical ones for each journal. There is a small change to make in the zenodo upload section, where we need to say _if you publish with EJ, go to the EJ community, if you publish with EctJ, go to the EctJ community_
+4. to have a unique google spreadsheet to log metadata (adding a column `journal` with values `EJ` or `EctJ` to differentiate)
+5. to amend initiation of reproducibility checks process via dropbox file request link (see below) - starting from templated _conditional acceptance_ message of managing editor which automatically copies `ejdataeditor@gmail.com` or `ectjdataeditor@gmail.com` - I will initiate the process upon receiving the _conditional acceptance_ of the ME - see proposition of new template below.
+:::
+
+## New Replication Checks Process Starting with Conditionally Accepted Papers
+
+1. `ME` sends _conditional acceptance_ message, and copies `DE`'s email.
+2. `ME` message contains following info:
+    1. Authors must submit paper, appendix and signed checklist via `EE`. They must also submit a replication package via dropbox link sent by `DE`.
+    1. Paper and appendix via `EE` named in format `MSXXXXXXXX-main-YYYYMMDD.tex`, `MSXXXXXXXX-appendix-YYYYMMDD.tex`, `MSXXXXXXXX-main-YYYYMMDD.pdf`, `MSXXXXXXXX-appendix-YYYYMMDD.pdf`.
+    adhering to certain formatting rules: [https://bit.ly/3g2YBaB](https://bit.ly/3g2YBaB), and following the guidelines ([https://bit.ly/3ivH38d](https://bit.ly/3ivH38d) is out of sync). Having those files on `EE` serves the purpose of having a master version of the accepted paper on record, against we can check the paper after potentially several rounds of replication checks.
+    2. Checklist needs to be signed ([https://bit.ly/3Qa0HW5](https://bit.ly/3Qa0HW5) is out of sync) and submitted to `EE`.
+    3. Authors will be invited by the `DE` to submit their replication package via dropbox file request link. The package needs to be structured as outlined on [https://ejdataeditor.github.io/](https://ejdataeditor.github.io/) (or new website resdataeditor.githb.io as the case may be)
+    
+
+
+to do:
+
+1. Update Guidelines ([https://bit.ly/3ivH38d](https://bit.ly/3ivH38d)
+1. Update Checklist [https://bit.ly/3Qa0HW5](https://bit.ly/3Qa0HW5)
+2. Update conditional acceptance template messages of all `ME`s
+3. Do exactly the same for `EctJ` `ME`s.
+
+
+## Draft of Conditional Acceptance Message Template
+
+Dear Author:
+
+I am pleased to inform you that I have decided to "conditionally accept" your submission, MS 20220160, titled
+"Strategic Campaign Communication: Evidence from 30,000 Candidate Manifestos"
+for publication in the Economic Journal.
+
+This means that your paper has been accepted for publication on the condition that it passes the applicable checks (reproducibility of results and anti-plagiarism).
+
+[SPACE FOR PERSONAL MESSAGES TO AUTHORS]
+
+Your final submission will be checked with anti-plagiarism software. At this stage, you are required to submit all relevant files for production and replication, accompanying files such as material for the online appendix and any data and data documentation files, as per our replication policy at: https://academic.oup.com/ej/pages/General_Instructions#data.
+
+As a next step, I am asking you to submit the final version of all your files in two separate ways: Your paper via Editorial Express, and your replication package via dropbox file request link (see below).
+
+### Submission of Paper via Editorial Express
+
+On Editorial Express, you should submit a single zip file containing three objects: two directories and one pdf file, as follows.
+
+1. `1-paper` : A directory containing all source code needed to compile your paper named in the appropriate way. In particular, please include `MSXXXXXXXX-main-YYYYMMDD.tex` and `MSXXXXXXXX-main-YYYYMMDD.pdf`, as well as all required input files (graphs and tables etc.) - `MSXXXXXXXX` being your manuscript number, and `YYYYMMDD` standing for the date of final submission in ISO format.
+2. `2-appendix` : Directory containing sources for appendices - if applicable - following the same naming convention as above.
+3. `checklist.pdf` : the signed checklist https://bit.ly/3Qa0HW5 .
+
+In preparing the final version of your paper, please consult the instructions for authors at:
+https://bit.ly/3ivH38d
+to make sure your final submission conforms to the journal's requirements.
+
+For creating manuscripts in LaTex, The Economic Journal strongly recommends the use of its TeX template which is downloadable at: https://bit.ly/3g2YBaB
+
+### Submission of Replication Package via dropbox link
+
+Before you start to prepare your replication package, please consult the EJ Data Editor website for comprehensive guidance and step-by-step instructions: https://ejdataeditor.github.io
+
+You will shortly receive a file request link from our Data Editor, where you will be able to upload the package in the required format, as soon as your are ready.
+
+### Further Steps
+
+Once I have received all supporting documents along with confirmation that the paper has passed the appropriate checks, I will formally accept the paper for publication. At which point, the paper can be listed as "forthcoming" and your files will be sent to Oxford University Press for production.
+
+Now is also a good time to update the information on your website about the paper and inform the authors you are, or will be, citing in the paper. It is now in your and our best interest to increase the impact of your paper as much as possible.
+
+Thank you very much for your contribution to the Economic Journal. I look forward to seeing it in print.
+
+Sincerely,
+
+Your Manging Editor
 
 
 ## Purpose of this document
 
-This document describes the current workflow for reproducibility checks at `EJ`.
+This document describes the current workflow for reproducibility checks at `EJ` and `EctJ`
 
 **Input:** Replication package provided by the authors of accepted papers. 
 
 **Outputs:** 
 
-1. Email interactions with the authors during the process (via Editorial Express, `EE`), 
-2. clearance with authors after the checks are successfully completed (via `EE`), 
+1. Email interactions with the authors during the process, 
+2. clearance with authors after the checks are successfully completed
 3. metadata collection on each article at in spreadsheet `SS` (via Google Docs, see below).
 
 **Interested Parties:**
 
-1. EJ Data Editor: {{< var de.full >}}
+1. RES Data Editor: {{< var de.full >}}
 2. EJ Editorial Office. 
     1. RES Publications Manager, {{< var pm.full >}}
     2. Editorial Office London, {{< var eo.full >}} and colleagues.
@@ -48,6 +132,7 @@ This document describes the current workflow for reproducibility checks at `EJ`.
 | Abbreviation   | Meaning  | comments |
 |-----    | -----  | ----- |
 |`EJ`| The Economic Journal | [website.](https://res.org.uk/journals/the-economic-journal/)
+|`EctJ`| The Econometrics Journal | [website.](https://onlinelibrary.wiley.com/journal/1368423x)
 |`EO`| EJ Editorial Office | Team in London which manages overall publication process  |
 |`ME`| Managing Editor | Person in charge of accepting/rejecting papers at `EJ` |
 |`DE`| Data Editor | Person in charge of managing reproducibility checks at `EJ`  |
@@ -76,11 +161,14 @@ When the authors (re-)submit the package via `EE`, {{< var de.first >}} sees and
 `EO` handles the first two types, {{< var de.first >}} downloads the third type. {{< var eo.first >}} checks the `HT` frequently for conditionally accepted papers, downloads their replication package and places it into folder `2. Submitted replication packages` of the shared dropbox `DB`, which has the following layout:
 
 ```
-├── 1 Key documents
-├── 2. Submitted replication packages
-├── 3. Replication reports
-├── 4. Background documents
-└── 5. Back office Data Editor
+.
+├── EJ-1-key-documents
+├── EJ-2-submitted-replication-packages
+├── EJ-3-replication-reports
+├── EJ-4-background-documents
+├── EJ-5-back-office-data-editor
+├── EJ-6-good-to-go
+└── EJ-7-published-packages
 ```
 
 He then leaves a note on `EE` as shown in figure @fig-acqui. Notice that this happens *after the article has been assigned to replicators*!
@@ -141,8 +229,8 @@ in order to help {{< var de.first >}} assigning replicators efficiently. This al
 
 *Notice that this section is close to identical whether the replicator uses their own machine or the cloud based `nuvolos` system*
 
-1. Navigates to shared `DB` folder `2. Submitted replication packages`, and looks for the correct submission number and Author names.
-1. From that folder, downloads a copy of package from `3. Replication Package` of the corresponding paper in the shared dropbox to their local drive. Notice that `3. Replication Package` is *read-only* on the dropbox, so replicators are **forced** to do their work outside of it.
+1. Navigates to shared `DB` folder `EJ-2-submitted-replication-packages`, and looks for the correct submission number and Author names.
+1. From that folder, downloads a copy of entire package to their local drive. Notice that `EJ-2-submitted-replication-packages` is *read-only* on the dropbox, so replicators are **forced** to do their work outside of it.
 2. Replicator starts clock.
 2. Replicator studies the package. 
     1. This will involve a very close reading of the `README` file. 
@@ -222,21 +310,19 @@ This _digital fingerprint_ is the so-called [`md5sum`](https://en.wikipedia.org/
 
 We will compute our version of the `md5` string on the finally accepted version of the replication package, located here in the shared `DB`:
 
+```         
+
+├── EJ-2-submitted-replication-packages
+    ├── Lastname-XXXXXXXX-R3
+        ├── 3-replication-package.zip
 ```
 
-├── 2. Submitted replication packages
-    ├── MS_NUMBER_OF_PAPER
-        ├── 3. Replication Package
-```
+The computation of the `md5` on our side is straightfoward. On a Linux command line one would run
 
-The computation of the `md5` on our side is straightfoward. In `R`, for example, one would run command
+``` bash
+$ md5sum 3-replication-package.zip
 
-```bash
-# Assume we navigated into the above directory in `DB`
-# can run this on command line or directly in `R`
-$ Rscript -e 'tools::md5sum("3 Replication package.zip")'
-         3 Replication package.zip 
-"93b6634a97954d6cbfefa56f9dff315e" 
+93b6634a97954d6cbfefa56f9dff315e 
 ```
 
 The string `"93b6634a97954d6cbfefa56f9dff315e"` needs to match the string on zenodo, or the paper will not be released for publication.
