@@ -23,7 +23,7 @@ v{{< var version >}}: Proposition for unique EJ + EctJ workflow by Florian
 
 ::: {.callout-note}
 
-# too long; didn't read (tl;dr)
+# Executive Summary
 
 I propose:
 
@@ -34,20 +34,16 @@ I propose:
 3. to handle all communications via those emails instead of `EE`. I can upload histories to `EE` correspondance folder upon request.
 3. to have a _unique_ RES Data Editor website instead of 2 almost identical ones for each journal. There is a small change to make in the zenodo upload section, where we need to say _if you publish with EJ, go to the EJ community, if you publish with EctJ, go to the EctJ community_
 4. to have a unique google spreadsheet to log metadata (adding a column `journal` with values `EJ` or `EctJ` to differentiate)
-5. to amend initiation of reproducibility checks process via dropbox file request link (see below) - starting from templated _conditional acceptance_ message of managing editor which automatically copies `ejdataeditor@gmail.com` or `ectjdataeditor@gmail.com` - I will initiate the process upon receiving the _conditional acceptance_ of the ME - see proposition of new template below.
+5. to amend initiation of reproducibility checks process via dropbox file request link (see below) - starting from templated _conditional acceptance_ message of managing editor - see proposition of new template below.
 :::
 
 ## New Replication Checks Process Starting with Conditionally Accepted Papers
 
-1. `ME` sends _conditional acceptance_ message, and copies `DE`'s email.
+1. `ME` sends _conditional acceptance_ message.
 2. `ME` message contains following info:
-    1. Authors must submit paper, appendix and signed checklist via `EE`. They must also submit a replication package via dropbox link sent by `DE`.
+    1. Authors must submit paper, appendix and signed checklist ([https://bit.ly/3Qa0HW5](https://bit.ly/3Qa0HW5) is out of sync) via `EE`. After submission on EE, they must submit a replication package via dropbox link sent by DE, where package is structured as in https://ejdataeditor.github.io/.
     1. Paper and appendix via `EE` named in format `MSXXXXXXXX-main-YYYYMMDD.tex`, `MSXXXXXXXX-appendix-YYYYMMDD.tex`, `MSXXXXXXXX-main-YYYYMMDD.pdf`, `MSXXXXXXXX-appendix-YYYYMMDD.pdf`.
     adhering to certain formatting rules: [https://bit.ly/3g2YBaB](https://bit.ly/3g2YBaB), and following the guidelines ([https://bit.ly/3ivH38d](https://bit.ly/3ivH38d) is out of sync). Having those files on `EE` serves the purpose of having a master version of the accepted paper on record, against we can check the paper after potentially several rounds of replication checks.
-    2. Checklist needs to be signed ([https://bit.ly/3Qa0HW5](https://bit.ly/3Qa0HW5) is out of sync) and submitted to `EE`.
-    3. Authors will be invited by the `DE` to submit their replication package via dropbox file request link. The package needs to be structured as outlined on [https://ejdataeditor.github.io/](https://ejdataeditor.github.io/) (or new website resdataeditor.githb.io as the case may be)
-    
-
 
 to do:
 
@@ -71,27 +67,27 @@ This means that your paper has been accepted for publication on the condition th
 
 Your final submission will be checked with anti-plagiarism software. At this stage, you are required to submit all relevant files for production and replication, accompanying files such as material for the online appendix and any data and data documentation files, as per our replication policy at: https://academic.oup.com/ej/pages/General_Instructions#data.
 
-As a next step, I am asking you to submit the final version of all your files in two separate ways: Your paper via Editorial Express, and your replication package via dropbox file request link (see below).
+Next, I am asking you to submit the final version of all your files in two consecutive steps: Your paper and any appendices together with a signed checklist via Editorial Express, and your replication package via a file request link directly to our Data Editor (see below).
 
-### Submission of Paper via Editorial Express
+### Step 1: Submission of Paper via Editorial Express
 
-On Editorial Express, you should submit a single zip file containing three objects: two directories and one pdf file, as follows.
+On Editorial Express, you should submit a single zip file containing three objects: two directories and one pdf file which you signed, as follows.
 
 1. `1-paper` : A directory containing all source code needed to compile your paper named in the appropriate way. In particular, please include `MSXXXXXXXX-main-YYYYMMDD.tex` and `MSXXXXXXXX-main-YYYYMMDD.pdf`, as well as all required input files (graphs and tables etc.) - `MSXXXXXXXX` being your manuscript number, and `YYYYMMDD` standing for the date of final submission in ISO format.
 2. `2-appendix` : Directory containing sources for appendices - if applicable - following the same naming convention as above.
 3. `checklist.pdf` : the signed checklist https://bit.ly/3Qa0HW5 .
 
 In preparing the final version of your paper, please consult the instructions for authors at:
-https://bit.ly/3ivH38d
+[https://bit.ly/3ivH38d](https://bit.ly/3ivH38d)
 to make sure your final submission conforms to the journal's requirements.
 
-For creating manuscripts in LaTex, The Economic Journal strongly recommends the use of its TeX template which is downloadable at: https://bit.ly/3g2YBaB
+For creating manuscripts in LaTex, The Economic Journal strongly recommends the use of its TeX template which is downloadable at: [h9https://bit.ly/3g2YBaB)]
 
-### Submission of Replication Package via dropbox link
+### Step 2: Submission of Replication Package via file request link
 
-Before you start to prepare your replication package, please consult the EJ Data Editor website for comprehensive guidance and step-by-step instructions: https://ejdataeditor.github.io
+*After* having received your final version of paper and appendices together with the signed checklist on Editorial Express (Step 1 above), our data editor will initiate the replication checks process by sending you a file request link, where you will be able to upload your replication package, as soon as your are ready to do so.
 
-You will shortly receive a file request link from our Data Editor, where you will be able to upload the package in the required format, as soon as your are ready.
+*Before* you start to prepare your replication package, please consult the EJ Data Editor website for comprehensive guidance and step-by-step instructions: [https://ejdataeditor.github.io](https://ejdataeditor.github.io).
 
 ### Further Steps
 
@@ -145,20 +141,18 @@ This document describes the current workflow for reproducibility checks at `EJ` 
 
 Let us proceed chronologically. The paper has just been *conditionally accepted* by the managing author (`ME`).
 
-## Step 1. Editorial Office: Author communication
+## Step 1. Editorial Office: Acquisition of Final Version and Logging
 
-1. After conditional acceptance by the `ME`, `EO` communicates with the authors of the paper, sending them instructions about how to produce the replication package and the check-list that authors should submit.
-1. `EO` also refers the authors to the Data Editor's website at [{{< var de.website >}}]({{< var de.website >}}) for detailed instructions on how to prepare and upload the package.
+1. After conditional acceptance by the `ME`, `EO` waits on `HT` of `EE` until the required zip file arrives. See above for what the required contents are. (*paper, appendices and checklist*). If contents are missing, cycle back to authors until correct and signed.
+1. After successful arrival on `EE`, `EO` logs the paper's metadata in our shared googlesheet `SS`, filling all fields as shown in figure @fig-logmetadata (leaving the rest empty). Upon turning blue, the googlesheet will send an automated message to the Data Editor ({{< var de.first >}}) - no further action on behalf of `EO` required.
+
+![`EO` logs meta data of replication package.](img/step0.png){#fig-logmetadata}
 
 ## Step 2. Data Editor ({{< var de.first >}}): Acquisition of package
 
-When the authors (re-)submit the package via `EE`, {{< var de.first >}} sees and downloads the paper from `EE`’s Holding Tank (`HT`). The `HT` includes papers which are
+{{< var de.first >}} receives an automated message that a new paper has arrived to be checked for reproducibility. He creates a new folder inside the shared dropbox folder `EJ-2-submitted-replication-packages` (`EctJ-2-submitted-replication-packages` for `EctJ`) named with the main author's last name and their MS number, and *sends a file request link to the author via email*.
 
-1. initial submissions, 
-2. revisions, and 
-3. conditionally accepted articles. 
-
-`EO` handles the first two types, {{< var de.first >}} downloads the third type. {{< var eo.first >}} checks the `HT` frequently for conditionally accepted papers, downloads their replication package and places it into folder `2. Submitted replication packages` of the shared dropbox `DB`, which has the following layout:
+as a reminder, the dropbox folder structure is as follows:
 
 ```
 .
@@ -171,22 +165,12 @@ When the authors (re-)submit the package via `EE`, {{< var de.first >}} sees and
 └── EJ-7-published-packages
 ```
 
-He then leaves a note on `EE` as shown in figure @fig-acqui. Notice that this happens *after the article has been assigned to replicators*!
+*After* successful arrival of the package, {{< var de.first >}} logs `arrival date package` in the `SS`.
 
-![Acquisition of Replication Package from `EE` `HT` on behalf of the `DE`. Notice manual addition of comment.](img/step1.png){#fig-acqui}
+## Step 3. Data Editor: Replicator Assigment
 
+The DE picks a replicator by setting the following fields on the spreadsheet:
 
-
-## Step 3. Data Editor: Logging of Metadata and Replicator Assignment
-
-{{< var de.first >}} creates a new entry (*a new row*) in `SS` (shared via link on google sheets) including all the relevant meta-data for the article, and assigning it to a replicator.
-
-The relevant columns to be filled by {{< var de.first >}} include:
-
-1. `MS`: Manuscript number
-1. `R`: Current round of the reproducibility checks (1,2,3,...)
-1. Author, Title, Email from the authors, `ME`’s initials, Data Policy
-1. Arrival date: the date at which paper arrive in `HT` (Feb 16 in the example above).
 1. Status: when assigning it to replicators, status should be *A* (for assigned).
 1. Checker: pick one of the available replicators
 1. Date assigned: the date at which this Replicator Assignment is performed.
@@ -194,6 +178,12 @@ The relevant columns to be filled by {{< var de.first >}} include:
 After those fields have been entered, the Data Editor section of the spreadsheet turns white, and the replicator's part turns <span style="background-color:green;">green</span>. {{< var de.first >}} usually sends a short email to the replicator indicating that a new paper has been assigned, but it is the job of the replicators to regularly check whether they have papers assigned. This is illustrated in figure @fig-logmeta.
 
 ![`DE` logs meta data of replication package.](img/step2.png){#fig-logmeta}
+
+
+He then leaves a note on `EE` as shown in figure @fig-acqui. Notice that this happens *after the article has been assigned to replicators*!
+
+![Acquisition of Replication Package from `EE` `HT` on behalf of the `DE`. Notice manual addition of comment.](img/step1.png){#fig-acqui}
+
 
 ## Step 4. Replicators
 
@@ -280,17 +270,39 @@ This section provides some guidelines for what a replicator should look out for 
 
 * Date Decision taken
 * Decision Code: `A` Accept, `R` Major Revision, `M` Minor revision and short description
+
+## Step 6: Package Resubmissions - `EO` and `DE`
+
+Messages from the `DE` to authors inviting changes to the package and resubmission contain two points:
+
+1. A letter to the Data Editor in pdf format *must be submitted to EE*, clearly addressing all points raised.
+2. *After* the letter is successfully received on `EE`, the author will receive a new file request link to submit the revised package.
+
+**Internally**, we follow the same steps as with first time submissions:
+
+1. `EO` logs the return of package upon receiving the letter on `EE` by copying the first 9 cells of the rejected version of the paper, and pasting it at the bottom of the spreadsheet, incrementing the `Round` field by 1, and logging the correct `arrival date EE`, as shown in figure @fig-revision.
+2. The `DE` is again alerted automatically and sends the file request link to the authors.
+
+![`EO` logs resubmitted paper](img/step-revision.png){#fig-revision}
+
+
+The `DE` takes care of logging the fields concerning resubmission date:
+
 * In case a  package is resubmitted for the first time, the date of re-submission will be included to close this entry, and a new entry (*row*) will be created with revision number equal 2. If the re-submission is a minor comment, {{< var de.first >}} changes the Status as described below but do not change the code of the Decision section. If the initial outcome of this iteration is already accept, mark the code as “A”, and introduce the current date also as re-submission date, as in figure @fig-resub.
 
 ![Acceptance Decisions of the `DE` upon resubmission.](img/step5.png){#fig-resub}
 
-* If no further revisions are needed, {{< var de.first >}} notifies the authors accordingly and changes the status of the google sheet to "AP" (acceptable package), at which point it returns to the `EO` for plagiarism checks and final communications with the authors. After this, `EO` sets the status field to `NT` (meaning ready for publication but **N**ot **T**ransferred yet). At that point, the first section of the google sheet turns <span style="background-color:yellow;">yellow</span>:
+* If no further revisions are needed, {{< var de.first >}} notifies the authors accordingly and changes the status of the google sheet to "AP" (acceptable package).
+
+![`DE` sets status to *Acceptable Package*](img/step5.5.png)
+
+* Next, the package returns to the `EO` for plagiarism checks and final communications with the authors. After this, `EO` sets the status field to `NT` (meaning ready for publication but **N**ot **T**ransferred yet). At that point, the first section of the google sheet turns <span style="background-color:yellow;">yellow</span>:
 
 ![`EO` sets status to *Not Transferred* Status](img/step6.png)
 
-## Step 6. Editorial Office: Request `Zenodo` Upload
+## Step 7. Editorial Office: Request `Zenodo` Upload
 
-`EO` sends an email to the authors via `EE` (copying {{< var de.first >}} and {{< var pm.first >}}) with a request to upload the package to the [`EJ` community at Zenodo](https://zenodo.org/communities/ej-replication-repository), as indicated on the [DE's website](https://ejdataeditor.github.io/package.htm). 
+`EO` sends an email to the authors via `EE` (copying {{< var de.first >}} and {{< var pm.first >}}) with a request to upload the package to the [`EJ` community at Zenodo](https://zenodo.org/communities/ej-replication-repository), as indicated on the [DE's website](https://ejdataeditor.github.io/package). 
 
 `EO` adds an important reminder for the authors in their message:
 
@@ -325,7 +337,15 @@ $ md5sum 3-replication-package.zip
 93b6634a97954d6cbfefa56f9dff315e 
 ```
 
-The string `"93b6634a97954d6cbfefa56f9dff315e"` needs to match the string on zenodo, or the paper will not be released for publication.
+The string `"93b6634a97954d6cbfefa56f9dff315e"` needs to match the string on zenodo, or the paper will not be released for publication. 
+
+::: {.callout-note}
+
+# Importance of initial folder structure
+
+This only works if the authors created the zip file on their computer, that is, if the archive `3-replication-package.zip` was part of their last submitted package. If, for instance, they submit `3-replication-package` (**no zip!!**), and we create the zip archive for them, the md5 sum **will be different**!
+
+:::
 
 ## Step 7. Editorial Office: Return to `ME`
 
