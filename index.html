@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Florian Oswald">
-<meta name="dcterms.date" content="2023-10-09">
+<meta name="dcterms.date" content="2023-10-10">
 
-<title>EJ Reproducibility Checks: Workflow</title>
+<title>RES Reproducibility Checks: Workflow</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -81,14 +81,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#new-replication-checks-process-starting-with-conditionally-accepted-papers" id="toc-new-replication-checks-process-starting-with-conditionally-accepted-papers" class="nav-link active" data-scroll-target="#new-replication-checks-process-starting-with-conditionally-accepted-papers">New Replication Checks Process Starting with Conditionally Accepted Papers</a></li>
-  <li><a href="#draft-of-conditional-acceptance-message-template" id="toc-draft-of-conditional-acceptance-message-template" class="nav-link" data-scroll-target="#draft-of-conditional-acceptance-message-template">Draft of Conditional Acceptance Message Template</a>
-  <ul class="collapse">
-  <li><a href="#step-1-submission-of-paper-via-editorial-express" id="toc-step-1-submission-of-paper-via-editorial-express" class="nav-link" data-scroll-target="#step-1-submission-of-paper-via-editorial-express">Step 1: Submission of Paper via Editorial Express</a></li>
-  <li><a href="#step-2-submission-of-replication-package-via-file-request-link" id="toc-step-2-submission-of-replication-package-via-file-request-link" class="nav-link" data-scroll-target="#step-2-submission-of-replication-package-via-file-request-link">Step 2: Submission of Replication Package via file request link</a></li>
-  <li><a href="#further-steps" id="toc-further-steps" class="nav-link" data-scroll-target="#further-steps">Further Steps</a></li>
-  </ul></li>
-  <li><a href="#purpose-of-this-document" id="toc-purpose-of-this-document" class="nav-link" data-scroll-target="#purpose-of-this-document">Purpose of this document</a></li>
+  <li><a href="#purpose-of-this-document" id="toc-purpose-of-this-document" class="nav-link active" data-scroll-target="#purpose-of-this-document">Purpose of this document</a></li>
+  <li><a href="#workflow-in-detail" id="toc-workflow-in-detail" class="nav-link" data-scroll-target="#workflow-in-detail">Workflow in Detail</a></li>
   <li><a href="#step-1.-editorial-office-acquisition-of-final-version-and-logging" id="toc-step-1.-editorial-office-acquisition-of-final-version-and-logging" class="nav-link" data-scroll-target="#step-1.-editorial-office-acquisition-of-final-version-and-logging">Step 1. Editorial Office: Acquisition of Final Version and Logging</a></li>
   <li><a href="#step-2.-data-editor-var-de.first-acquisition-of-package" id="toc-step-2.-data-editor-var-de.first-acquisition-of-package" class="nav-link" data-scroll-target="#step-2.-data-editor-var-de.first-acquisition-of-package">Step 2. Data Editor (Florian): Acquisition of package</a></li>
   <li><a href="#step-3.-data-editor-replicator-assigment" id="toc-step-3.-data-editor-replicator-assigment" class="nav-link" data-scroll-target="#step-3.-data-editor-replicator-assigment">Step 3. Data Editor: Replicator Assigment</a></li>
@@ -103,7 +97,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#step-5.-data-editor-decision" id="toc-step-5.-data-editor-decision" class="nav-link" data-scroll-target="#step-5.-data-editor-decision">Step 5. Data Editor Decision</a></li>
   <li><a href="#step-6-package-resubmissions---eo-and-de" id="toc-step-6-package-resubmissions---eo-and-de" class="nav-link" data-scroll-target="#step-6-package-resubmissions---eo-and-de">Step 6: Package Resubmissions - <code>EO</code> and <code>DE</code></a></li>
   <li><a href="#step-7.-editorial-office-request-zenodo-upload" id="toc-step-7.-editorial-office-request-zenodo-upload" class="nav-link" data-scroll-target="#step-7.-editorial-office-request-zenodo-upload">Step 7. Editorial Office: Request <code>Zenodo</code> Upload</a></li>
-  <li><a href="#step-7.-editorial-office-return-to-me" id="toc-step-7.-editorial-office-return-to-me" class="nav-link" data-scroll-target="#step-7.-editorial-office-return-to-me">Step 7. Editorial Office: Return to <code>ME</code></a></li>
+  <li><a href="#step-8.-editorial-office-return-to-me" id="toc-step-8.-editorial-office-return-to-me" class="nav-link" data-scroll-target="#step-8.-editorial-office-return-to-me">Step 8. Editorial Office: Return to <code>ME</code></a></li>
+  <li><a href="#sec-app" id="toc-sec-app" class="nav-link" data-scroll-target="#sec-app">Appendix: Conditional Acceptance Message Template</a></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="EJ-workflow.docx"><i class="bi bi-file-word"></i>MS Word</a></li><li><a href="EJ-workflow.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
 </div>
@@ -111,7 +106,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">EJ Reproducibility Checks: Workflow</h1>
+<h1 class="title">RES Reproducibility Checks: Workflow</h1>
 </div>
 
 
@@ -128,7 +123,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 9, 2023</p>
+      <p class="date">October 10, 2023</p>
     </div>
   </div>
   
@@ -142,81 +137,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>v1: The bulk of this was the work of <a href="https://joanllull.github.io/">Joan Llull</a>.<br>
 v1.1: Minor additions by <a href="https://floswald.github.io/">Florian Oswald</a>.<br>
 v1.2: Updates and comments from Brooke Sperry<br>
-v1.3: Proposition for unique EJ + EctJ workflow by Florian</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Executive Summary
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>I propose:</p>
+v1.3: Proposition for unique EJ + EctJ workflow by Florian<br>
+v1.4: Updates and comments from Brooke Sperry</p>
+<p>Current to do:</p>
 <ol type="1">
-<li>the exact same wording of data policy for EJ and EctJ. I don’t see any particular reason why they should differ.</li>
-<li>the exact same process of reproducibility checks for both journals.</li>
-<li>to keep two different dropboxes to collect packages.</li>
-<li>to keep two separate email addresses <code>ejdataeditor@gmail.com</code> or <code>ectjdataeditor@gmail.com</code></li>
-<li>to handle all communications via those emails instead of <code>EE</code>. I can upload histories to <code>EE</code> correspondance folder upon request.</li>
-<li>to have a <em>unique</em> RES Data Editor website instead of 2 almost identical ones for each journal. There is a small change to make in the zenodo upload section, where we need to say <em>if you publish with EJ, go to the EJ community, if you publish with EctJ, go to the EctJ community</em></li>
-<li>to have a unique google spreadsheet to log metadata (adding a column <code>journal</code> with values <code>EJ</code> or <code>EctJ</code> to differentiate)</li>
-<li>to amend initiation of reproducibility checks process via dropbox file request link (see below) - starting from templated <em>conditional acceptance</em> message of managing editor - see proposition of new template below.</li>
-</ol>
-</div>
-</div>
-<section id="new-replication-checks-process-starting-with-conditionally-accepted-papers" class="level2">
-<h2 class="anchored" data-anchor-id="new-replication-checks-process-starting-with-conditionally-accepted-papers">New Replication Checks Process Starting with Conditionally Accepted Papers</h2>
-<ol type="1">
-<li><code>ME</code> sends <em>conditional acceptance</em> message.</li>
-<li><code>ME</code> message contains following info:
-<ol type="1">
-<li>Authors must submit paper, appendix and signed checklist (<a href="https://bit.ly/3Qa0HW5">https://bit.ly/3Qa0HW5</a> is out of sync) via <code>EE</code>. After submission on EE, they must submit a replication package via dropbox link sent by DE, where package is structured as in https://ejdataeditor.github.io/.</li>
-<li>Paper and appendix via <code>EE</code> named in format <code>MSXXXXXXXX-main-YYYYMMDD.tex</code>, <code>MSXXXXXXXX-appendix-YYYYMMDD.tex</code>, <code>MSXXXXXXXX-main-YYYYMMDD.pdf</code>, <code>MSXXXXXXXX-appendix-YYYYMMDD.pdf</code>. adhering to certain formatting rules: <a href="https://bit.ly/3g2YBaB">https://bit.ly/3g2YBaB</a>, and following the guidelines (<a href="https://bit.ly/3ivH38d">https://bit.ly/3ivH38d</a> is out of sync). Having those files on <code>EE</code> serves the purpose of having a master version of the accepted paper on record, against we can check the paper after potentially several rounds of replication checks.</li>
-</ol></li>
-</ol>
-<p>to do:</p>
-<ol type="1">
-<li>Update Guidelines (<a href="https://bit.ly/3ivH38d">https://bit.ly/3ivH38d</a></li>
+<li>Update Guidelines <a href="https://bit.ly/3ivH38d">https://bit.ly/3ivH38d</a></li>
 <li>Update Checklist <a href="https://bit.ly/3Qa0HW5">https://bit.ly/3Qa0HW5</a></li>
-<li>Update conditional acceptance template messages of all <code>ME</code>s</li>
+<li>Update conditional acceptance template messages of all <code>ME</code>s (see <a href="#sec-app">Section&nbsp;11</a>)</li>
 <li>Do exactly the same for <code>EctJ</code> <code>ME</code>s.</li>
 </ol>
-</section>
-<section id="draft-of-conditional-acceptance-message-template" class="level2">
-<h2 class="anchored" data-anchor-id="draft-of-conditional-acceptance-message-template">Draft of Conditional Acceptance Message Template</h2>
-<p>Dear Author:</p>
-<p>I am pleased to inform you that I have decided to “conditionally accept” your submission, MS 20220160, titled “Strategic Campaign Communication: Evidence from 30,000 Candidate Manifestos” for publication in the Economic Journal.</p>
-<p>This means that your paper has been accepted for publication on the condition that it passes the applicable checks (reproducibility of results and anti-plagiarism).</p>
-<p>[SPACE FOR PERSONAL MESSAGES TO AUTHORS]</p>
-<p>Your final submission will be checked with anti-plagiarism software. At this stage, you are required to submit all relevant files for production and replication, accompanying files such as material for the online appendix and any data and data documentation files, as per our replication policy at: https://academic.oup.com/ej/pages/General_Instructions#data.</p>
-<p>Next, I am asking you to submit the final version of all your files in two consecutive steps: Your paper and any appendices together with a signed checklist via Editorial Express, and your replication package via a file request link directly to our Data Editor (see below).</p>
-<section id="step-1-submission-of-paper-via-editorial-express" class="level3">
-<h3 class="anchored" data-anchor-id="step-1-submission-of-paper-via-editorial-express">Step 1: Submission of Paper via Editorial Express</h3>
-<p>On Editorial Express, you should submit a single zip file containing three objects: two directories and one pdf file which you signed, as follows.</p>
-<ol type="1">
-<li><code>1-paper</code> : A directory containing all source code needed to compile your paper named in the appropriate way. In particular, please include <code>MSXXXXXXXX-main-YYYYMMDD.tex</code> and <code>MSXXXXXXXX-main-YYYYMMDD.pdf</code>, as well as all required input files (graphs and tables etc.) - <code>MSXXXXXXXX</code> being your manuscript number, and <code>YYYYMMDD</code> standing for the date of final submission in ISO format.</li>
-<li><code>2-appendix</code> : Directory containing sources for appendices - if applicable - following the same naming convention as above.</li>
-<li><code>checklist.pdf</code> : the signed checklist https://bit.ly/3Qa0HW5 .</li>
-</ol>
-<p>In preparing the final version of your paper, please consult the instructions for authors at: <a href="https://bit.ly/3ivH38d">https://bit.ly/3ivH38d</a> to make sure your final submission conforms to the journal’s requirements.</p>
-<p>For creating manuscripts in LaTex, The Economic Journal strongly recommends the use of its TeX template which is downloadable at: [h9https://bit.ly/3g2YBaB)]</p>
-</section>
-<section id="step-2-submission-of-replication-package-via-file-request-link" class="level3">
-<h3 class="anchored" data-anchor-id="step-2-submission-of-replication-package-via-file-request-link">Step 2: Submission of Replication Package via file request link</h3>
-<p><em>After</em> having received your final version of paper and appendices together with the signed checklist on Editorial Express (Step 1 above), our data editor will initiate the replication checks process by sending you a file request link, where you will be able to upload your replication package, as soon as your are ready to do so.</p>
-<p><em>Before</em> you start to prepare your replication package, please consult the EJ Data Editor website for comprehensive guidance and step-by-step instructions: <a href="https://ejdataeditor.github.io">https://ejdataeditor.github.io</a>.</p>
-</section>
-<section id="further-steps" class="level3">
-<h3 class="anchored" data-anchor-id="further-steps">Further Steps</h3>
-<p>Once I have received all supporting documents along with confirmation that the paper has passed the appropriate checks, I will formally accept the paper for publication. At which point, the paper can be listed as “forthcoming” and your files will be sent to Oxford University Press for production.</p>
-<p>Now is also a good time to update the information on your website about the paper and inform the authors you are, or will be, citing in the paper. It is now in your and our best interest to increase the impact of your paper as much as possible.</p>
-<p>Thank you very much for your contribution to the Economic Journal. I look forward to seeing it in print.</p>
-<p>Sincerely,</p>
-<p>Your Manging Editor</p>
-</section>
-</section>
 <section id="purpose-of-this-document" class="level2">
 <h2 class="anchored" data-anchor-id="purpose-of-this-document">Purpose of this document</h2>
 <p>This document describes the current workflow for reproducibility checks at <code>EJ</code> and <code>EctJ</code></p>
@@ -294,14 +223,29 @@ Executive Summary
 </tr>
 </tbody>
 </table>
-<p><strong>Workflow in Detail</strong></p>
-<p>Let us proceed chronologically. The paper has just been <em>conditionally accepted</em> by the managing author (<code>ME</code>).</p>
+</section>
+<section id="workflow-in-detail" class="level2">
+<h2 class="anchored" data-anchor-id="workflow-in-detail">Workflow in Detail</h2>
+<p>Let us proceed chronologically. The paper has just been <em>conditionally accepted</em> by the managing author (<code>ME</code>) - see the proposed message template in appendix <a href="#sec-app">Section&nbsp;11</a>.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If not specifically mentioned, all points in the following document apply to both journals equally, i.e.&nbsp;it is possible to interchange <code>EJ</code> with <code>EctJ</code>.</p>
+</div>
+</div>
 </section>
 <section id="step-1.-editorial-office-acquisition-of-final-version-and-logging" class="level2">
 <h2 class="anchored" data-anchor-id="step-1.-editorial-office-acquisition-of-final-version-and-logging">Step 1. Editorial Office: Acquisition of Final Version and Logging</h2>
 <ol type="1">
-<li>After conditional acceptance by the <code>ME</code>, <code>EO</code> waits on <code>HT</code> of <code>EE</code> until the required zip file arrives. See above for what the required contents are. (<em>paper, appendices and checklist</em>). If contents are missing, cycle back to authors until correct and signed.</li>
-<li>After successful arrival on <code>EE</code>, <code>EO</code> logs the paper’s metadata in our shared googlesheet <code>SS</code>, filling all fields as shown in figure <a href="#fig-logmetadata">Figure&nbsp;1</a> (leaving the rest empty). Upon turning blue, the googlesheet will send an automated message to the Data Editor (Florian) - no further action on behalf of <code>EO</code> required.</li>
+<li>After conditional acceptance by the <code>ME</code>, <code>EO</code> waits on <code>HT</code> until the required zip file arrives. See the template for conditional acceptance of <code>ME</code> for what the required contents are in <a href="#sec-app">Section&nbsp;11</a>. (<em>paper, appendices and checklist</em>). If contents are missing, cycle back to authors until correct and signed. Having those files on <code>EE</code> serves the purpose of having a master version of the accepted paper on record, against which we can check the paper after potentially several rounds of replication checks.</li>
+<li>After successful arrival of <em>paper, appendices and checklist</em> on <code>EE</code>, <code>EO</code> logs the paper’s metadata in our shared googlesheet <code>SS</code>, filling all fields as shown in figure <a href="#fig-logmetadata">Figure&nbsp;1</a> (leaving the rest empty). Upon turning blue, the googlesheet will send an automated message to the Data Editor (Florian) - no further action on behalf of <code>EO</code> is required.</li>
 </ol>
 <div id="fig-logmetadata" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -312,8 +256,10 @@ Executive Summary
 </section>
 <section id="step-2.-data-editor-var-de.first-acquisition-of-package" class="level2">
 <h2 class="anchored" data-anchor-id="step-2.-data-editor-var-de.first-acquisition-of-package">Step 2. Data Editor (Florian): Acquisition of package</h2>
-<p>Florian receives an automated message that a new paper has arrived to be checked for reproducibility. He creates a new folder inside the shared dropbox folder <code>EJ-2-submitted-replication-packages</code> (<code>EctJ-2-submitted-replication-packages</code> for <code>EctJ</code>) named with the main author’s last name and their MS number, and <em>sends a file request link to the author via email</em>.</p>
-<p>as a reminder, the dropbox folder structure is as follows:</p>
+<p>Florian receives an automated message that a new paper has arrived which needs to be checked for reproducibility. He creates a new folder inside the shared dropbox folder <code>EJ-2-submitted-replication-packages</code> (<code>EctJ-2-submitted-replication-packages</code> for <code>EctJ</code>) named with the main author’s last name and their MS number, and <em>sends a file request link to the author via email</em>. In practice, the folder is named like</p>
+<pre><code>Smith-XXXXXXXX-R1</code></pre>
+<p>for <em>round 1</em>.</p>
+<p>As a reminder, the dropbox folder structure is as follows:</p>
 <pre><code>.
 ├── EJ-1-key-documents
 ├── EJ-2-submitted-replication-packages
@@ -558,9 +504,9 @@ Important Reminder: No Further Modifications of Replication Package!
     ├── Lastname-XXXXXXXX-R3
         ├── 3-replication-package.zip</code></pre>
 <p>The computation of the <code>md5</code> on our side is straightfoward. On a Linux command line one would run</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> md5sum 3-replication-package.zip</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">93b6634a97954d6cbfefa56f9dff315e</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> md5sum 3-replication-package.zip</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="ex">93b6634a97954d6cbfefa56f9dff315e</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>The string <code>"93b6634a97954d6cbfefa56f9dff315e"</code> needs to match the string on zenodo, or the paper will not be released for publication.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -576,8 +522,8 @@ Importance of initial folder structure
 </div>
 </div>
 </section>
-<section id="step-7.-editorial-office-return-to-me" class="level2">
-<h2 class="anchored" data-anchor-id="step-7.-editorial-office-return-to-me">Step 7. Editorial Office: Return to <code>ME</code></h2>
+<section id="step-8.-editorial-office-return-to-me" class="level2">
+<h2 class="anchored" data-anchor-id="step-8.-editorial-office-return-to-me">Step 8. Editorial Office: Return to <code>ME</code></h2>
 <p>After the EO completes the plagiarism checks, as per agreement with the MEs, the EO makes the final acceptance of the paper (unless the authors have changed the content of the paper during replication checks, in which case it is sent back to the ME for approval before final acceptance). After which it is transferred to Oxford University Press (OUP) for publication by the <code>EO</code>. When the file is transferred to OUP, it is marked in the system with a status of “P”, after which the entry turns green:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -585,6 +531,36 @@ Importance of initial folder structure
 <p></p><figcaption class="figure-caption">Setting of Status to <em>P</em> (published) after transfer to the publisher OUP by <code>EO</code></figcaption><p></p>
 </figure>
 </div>
+</section>
+<section id="sec-app" class="level2">
+<h2 class="anchored" data-anchor-id="sec-app">Appendix: Conditional Acceptance Message Template</h2>
+<p>Dear Author:</p>
+<p>I am pleased to inform you that I have decided to “conditionally accept” your submission, MS XXXXXXX, titled “The Title” for publication in the Economic Journal. This means that your paper has been accepted for publication on the condition that it passes the applicable checks (reproducibility of results and anti-plagiarism).</p>
+<p>[SPACE FOR PERSONAL MESSAGES TO AUTHORS]</p>
+<p>Your final submission will be checked with anti-plagiarism software. At this stage, you are required to submit all relevant files for production and replication, accompanying files such as material for the online appendix and any data and data documentation files, as per our replication policy at: <a href="https://academic.oup.com/ej/pages/General_Instructions#data">https://academic.oup.com/ej/pages/General_Instructions#data</a>.</p>
+<p>Next, I am asking you to submit the final version of all your files in two consecutive steps: Your paper and any appendices together with a signed checklist via Editorial Express, and your replication package via a file request link directly to our Data Editor (see below).</p>
+<section id="step-1-submission-of-paper-via-editorial-express" class="level4">
+<h4 class="anchored" data-anchor-id="step-1-submission-of-paper-via-editorial-express">Step 1: Submission of Paper via Editorial Express</h4>
+<p>On Editorial Express, you should submit a single zip file containing three objects: two directories and one pdf file which you signed, as follows.</p>
+<ol type="1">
+<li><code>1-paper</code> : A directory containing all source code needed to compile your paper named in the appropriate way. In particular, please include <code>MSXXXXXXXX-main-YYYYMMDD.tex</code> and <code>MSXXXXXXXX-main-YYYYMMDD.pdf</code>, as well as all required input files (graphs and tables etc.) - MSXXXXXXXX being your manuscript number, and <code>YYYYMMDD</code> standing for the date of final submission in ISO format.</li>
+<li><code>2-appendix</code> : Directory containing sources for appendices - if applicable - following the same naming convention as above.</li>
+<li><code>checklist.pdf</code> : the signed checklist https://bit.ly/3Qa0HW5 .</li>
+</ol>
+<p>In preparing the final version of your paper, please consult the instructions for authors at: https://bit.ly/3ivH38d to make sure your final submission conforms to the journal’s requirements. For creating manuscripts in LaTex, The Economic Journal strongly recommends the use of its TeX template which is downloadable at: [h9https://bit.ly/3g2YBaB)]</p>
+</section>
+<section id="step-2-submission-of-replication-package-via-file-request-link" class="level4">
+<h4 class="anchored" data-anchor-id="step-2-submission-of-replication-package-via-file-request-link">Step 2: Submission of Replication Package via file request link</h4>
+<p><em>After</em> having received your final version of paper and appendices together with the signed checklist on Editorial Express (Step 1 above), our data editor will initiate the replication checks process by sending you a file request link, where you will be able to upload your replication package, as soon as your are ready to do so.</p>
+<p><em>Before</em> you start to prepare your replication package, please consult the EJ Data Editor website for comprehensive guidance and step-by-step instructions: <a href="https://ejdataeditor.github.io">https://ejdataeditor.github.io</a>.</p>
+</section>
+<section id="further-steps" class="level4">
+<h4 class="anchored" data-anchor-id="further-steps">Further Steps</h4>
+<p>Once I have received all supporting documents along with confirmation that the paper has passed the appropriate checks, I will formally accept the paper for publication. At which point, the paper can be listed as “forthcoming” and your files will be sent to Oxford University Press for production. Now is also a good time to update the information on your website about the paper and inform the authors you are, or will be, citing in the paper. It is now in your and our best interest to increase the impact of your paper as much as possible.</p>
+<p>Thank you very much for your contribution to the Economic Journal. I look forward to seeing it in print.</p>
+<p>Sincerely,</p>
+<p>Your Managing Editor</p>
+</section>
 </section>
 
 </main>
