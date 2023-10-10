@@ -1,5 +1,5 @@
 ---
-title: "EJ Reproducibility Checks: Workflow"
+title: "RES Reproducibility Checks: Workflow"
 format: 
     html: default
     docx: default
@@ -19,87 +19,16 @@ author: Florian Oswald
 v1: The bulk of this was the work of [Joan Llull](https://joanllull.github.io/).  
 v1.1: Minor additions by [Florian Oswald](https://floswald.github.io/).  
 v1.2: Updates and comments from {{< var pm.full >}}  
-v{{< var version >}}: Proposition for unique EJ + EctJ workflow by Florian
+v1.3: Proposition for unique EJ + EctJ workflow by Florian  
+v{{< var version >}}: Updates and comments from {{< var pm.full >}}
 
-::: {.callout-note}
 
-# Executive Summary
+Current to do:
 
-I propose:
-
-1. the exact same wording of data policy for EJ and EctJ. I don't see any particular reason why they should differ.
-2. the exact same process of reproducibility checks for both journals.
-3. to keep two different dropboxes to collect packages.
-3. to keep two separate email addresses `ejdataeditor@gmail.com` or `ectjdataeditor@gmail.com`
-3. to handle all communications via those emails instead of `EE`. I can upload histories to `EE` correspondance folder upon request.
-3. to have a _unique_ RES Data Editor website instead of 2 almost identical ones for each journal. There is a small change to make in the zenodo upload section, where we need to say _if you publish with EJ, go to the EJ community, if you publish with EctJ, go to the EctJ community_
-4. to have a unique google spreadsheet to log metadata (adding a column `journal` with values `EJ` or `EctJ` to differentiate)
-5. to amend initiation of reproducibility checks process via dropbox file request link (see below) - starting from templated _conditional acceptance_ message of managing editor - see proposition of new template below.
-:::
-
-## New Replication Checks Process Starting with Conditionally Accepted Papers
-
-1. `ME` sends _conditional acceptance_ message.
-2. `ME` message contains following info:
-    1. Authors must submit paper, appendix and signed checklist ([https://bit.ly/3Qa0HW5](https://bit.ly/3Qa0HW5) is out of sync) via `EE`. After submission on EE, they must submit a replication package via dropbox link sent by DE, where package is structured as in https://ejdataeditor.github.io/.
-    1. Paper and appendix via `EE` named in format `MSXXXXXXXX-main-YYYYMMDD.tex`, `MSXXXXXXXX-appendix-YYYYMMDD.tex`, `MSXXXXXXXX-main-YYYYMMDD.pdf`, `MSXXXXXXXX-appendix-YYYYMMDD.pdf`.
-    adhering to certain formatting rules: [https://bit.ly/3g2YBaB](https://bit.ly/3g2YBaB), and following the guidelines ([https://bit.ly/3ivH38d](https://bit.ly/3ivH38d) is out of sync). Having those files on `EE` serves the purpose of having a master version of the accepted paper on record, against we can check the paper after potentially several rounds of replication checks.
-
-to do:
-
-1. Update Guidelines ([https://bit.ly/3ivH38d](https://bit.ly/3ivH38d)
+1. Update Guidelines [https://bit.ly/3ivH38d](https://bit.ly/3ivH38d)
 1. Update Checklist [https://bit.ly/3Qa0HW5](https://bit.ly/3Qa0HW5)
-2. Update conditional acceptance template messages of all `ME`s
+2. Update conditional acceptance template messages of all `ME`s (see @sec-app)
 3. Do exactly the same for `EctJ` `ME`s.
-
-
-## Draft of Conditional Acceptance Message Template
-
-Dear Author:
-
-I am pleased to inform you that I have decided to "conditionally accept" your submission, MS 20220160, titled
-"Strategic Campaign Communication: Evidence from 30,000 Candidate Manifestos"
-for publication in the Economic Journal.
-
-This means that your paper has been accepted for publication on the condition that it passes the applicable checks (reproducibility of results and anti-plagiarism).
-
-[SPACE FOR PERSONAL MESSAGES TO AUTHORS]
-
-Your final submission will be checked with anti-plagiarism software. At this stage, you are required to submit all relevant files for production and replication, accompanying files such as material for the online appendix and any data and data documentation files, as per our replication policy at: https://academic.oup.com/ej/pages/General_Instructions#data.
-
-Next, I am asking you to submit the final version of all your files in two consecutive steps: Your paper and any appendices together with a signed checklist via Editorial Express, and your replication package via a file request link directly to our Data Editor (see below).
-
-### Step 1: Submission of Paper via Editorial Express
-
-On Editorial Express, you should submit a single zip file containing three objects: two directories and one pdf file which you signed, as follows.
-
-1. `1-paper` : A directory containing all source code needed to compile your paper named in the appropriate way. In particular, please include `MSXXXXXXXX-main-YYYYMMDD.tex` and `MSXXXXXXXX-main-YYYYMMDD.pdf`, as well as all required input files (graphs and tables etc.) - `MSXXXXXXXX` being your manuscript number, and `YYYYMMDD` standing for the date of final submission in ISO format.
-2. `2-appendix` : Directory containing sources for appendices - if applicable - following the same naming convention as above.
-3. `checklist.pdf` : the signed checklist https://bit.ly/3Qa0HW5 .
-
-In preparing the final version of your paper, please consult the instructions for authors at:
-[https://bit.ly/3ivH38d](https://bit.ly/3ivH38d)
-to make sure your final submission conforms to the journal's requirements.
-
-For creating manuscripts in LaTex, The Economic Journal strongly recommends the use of its TeX template which is downloadable at: [h9https://bit.ly/3g2YBaB)]
-
-### Step 2: Submission of Replication Package via file request link
-
-*After* having received your final version of paper and appendices together with the signed checklist on Editorial Express (Step 1 above), our data editor will initiate the replication checks process by sending you a file request link, where you will be able to upload your replication package, as soon as your are ready to do so.
-
-*Before* you start to prepare your replication package, please consult the EJ Data Editor website for comprehensive guidance and step-by-step instructions: [https://ejdataeditor.github.io](https://ejdataeditor.github.io).
-
-### Further Steps
-
-Once I have received all supporting documents along with confirmation that the paper has passed the appropriate checks, I will formally accept the paper for publication. At which point, the paper can be listed as "forthcoming" and your files will be sent to Oxford University Press for production.
-
-Now is also a good time to update the information on your website about the paper and inform the authors you are, or will be, citing in the paper. It is now in your and our best interest to increase the impact of your paper as much as possible.
-
-Thank you very much for your contribution to the Economic Journal. I look forward to seeing it in print.
-
-Sincerely,
-
-Your Manging Editor
 
 
 ## Purpose of this document
@@ -137,22 +66,34 @@ This document describes the current workflow for reproducibility checks at `EJ` 
 |`SS`| Shared Spreadsheet | Main google docs spreadsheet to log all operations, Replicator availability and time use. Restricted access.|
 |`DB`| Shared Dropbox folder | Dropbox folder storing all replication packages. {{< var de.first >}} place package there, replicators download from here. *Read-only* access for everyone. |
 
-**Workflow in Detail**
+## Workflow in Detail
 
-Let us proceed chronologically. The paper has just been *conditionally accepted* by the managing author (`ME`).
+Let us proceed chronologically. The paper has just been *conditionally accepted* by the managing author (`ME`) - see the proposed message template in appendix @sec-app.
+
+::: {.callout-note}
+
+If not specifically mentioned, all points in the following document apply to both journals equally, i.e. it is possible to interchange `EJ` with `EctJ`.
+
+:::
 
 ## Step 1. Editorial Office: Acquisition of Final Version and Logging
 
-1. After conditional acceptance by the `ME`, `EO` waits on `HT` of `EE` until the required zip file arrives. See above for what the required contents are. (*paper, appendices and checklist*). If contents are missing, cycle back to authors until correct and signed.
-1. After successful arrival on `EE`, `EO` logs the paper's metadata in our shared googlesheet `SS`, filling all fields as shown in figure @fig-logmetadata (leaving the rest empty). Upon turning blue, the googlesheet will send an automated message to the Data Editor ({{< var de.first >}}) - no further action on behalf of `EO` required.
+1. After conditional acceptance by the `ME`, `EO` waits on `HT` until the required zip file arrives. See the template for conditional acceptance of `ME` for what the required contents are in @sec-app. (*paper, appendices and checklist*). If contents are missing, cycle back to authors until correct and signed. Having those files on `EE` serves the purpose of having a master version of the accepted paper on record, against which we can check the paper after potentially several rounds of replication checks.
+1. After successful arrival of *paper, appendices and checklist* on `EE`, `EO` logs the paper's metadata in our shared googlesheet `SS`, filling all fields as shown in figure @fig-logmetadata (leaving the rest empty). Upon turning blue, the googlesheet will send an automated message to the Data Editor ({{< var de.first >}}) - no further action on behalf of `EO` is required.
 
 ![`EO` logs meta data of replication package.](img/step0.png){#fig-logmetadata}
 
 ## Step 2. Data Editor ({{< var de.first >}}): Acquisition of package
 
-{{< var de.first >}} receives an automated message that a new paper has arrived to be checked for reproducibility. He creates a new folder inside the shared dropbox folder `EJ-2-submitted-replication-packages` (`EctJ-2-submitted-replication-packages` for `EctJ`) named with the main author's last name and their MS number, and *sends a file request link to the author via email*.
+{{< var de.first >}} receives an automated message that a new paper has arrived which needs to be checked for reproducibility. He creates a new folder inside the shared dropbox folder `EJ-2-submitted-replication-packages` (`EctJ-2-submitted-replication-packages` for `EctJ`) named with the main author's last name and their MS number, and *sends a file request link to the author via email*. In practice, the folder is named like
 
-as a reminder, the dropbox folder structure is as follows:
+```
+Smith-XXXXXXXX-R1
+```
+
+for *round 1*.
+
+As a reminder, the dropbox folder structure is as follows:
 
 ```
 .
@@ -347,9 +288,52 @@ This only works if the authors created the zip file on their computer, that is, 
 
 :::
 
-## Step 7. Editorial Office: Return to `ME`
+## Step 8. Editorial Office: Return to `ME`
 
 After the EO completes the plagiarism checks, as per agreement with the MEs, the EO makes the final acceptance of the paper (unless the authors have changed the content of the paper during replication checks, in which case it is sent back to the ME for approval before final acceptance). After which it is transferred to Oxford University Press (OUP) for publication by the `EO`. When the file is transferred to OUP, it is marked in the system with a status of “P”, after which the entry turns green:
 
 
 ![Setting of Status to *P* (published) after transfer to the publisher OUP by `EO`](img/step7.png)
+
+
+## Appendix: Conditional Acceptance Message Template{#sec-app}
+
+Dear Author:
+
+I am pleased to inform you that I have decided to “conditionally accept” your submission, MS XXXXXXX, titled “The Title” for publication in the Economic Journal.
+This means that your paper has been accepted for publication on the condition that it passes the applicable checks (reproducibility of results and anti-plagiarism).
+
+[SPACE FOR PERSONAL MESSAGES TO AUTHORS]
+
+Your final submission will be checked with anti-plagiarism software. At this stage, you are required to submit all relevant files for production and replication, accompanying files such as material for the online appendix and any data and data documentation files, as per our replication policy at: [https://academic.oup.com/ej/pages/General_Instructions#data](https://academic.oup.com/ej/pages/General_Instructions#data).
+
+Next, I am asking you to submit the final version of all your files in two consecutive steps: Your paper and any appendices together with a signed checklist via Editorial Express, and your replication package via a file request link directly to our Data Editor (see below).
+
+#### Step 1: Submission of Paper via Editorial Express
+
+On Editorial Express, you should submit a single zip file containing three objects: two directories and one pdf file which you signed, as follows.
+
+1.	`1-paper` : A directory containing all source code needed to compile your paper named in the appropriate way. In particular, please include `MSXXXXXXXX-main-YYYYMMDD.tex` and `MSXXXXXXXX-main-YYYYMMDD.pdf`, as well as all required input files (graphs and tables etc.) - MSXXXXXXXX being your manuscript number, and `YYYYMMDD` standing for the date of final submission in ISO format.
+2.	`2-appendix` : Directory containing sources for appendices - if applicable - following the same naming convention as above.
+3.	`checklist.pdf` : the signed checklist https://bit.ly/3Qa0HW5 .
+
+In preparing the final version of your paper, please consult the instructions for authors at: https://bit.ly/3ivH38d to make sure your final submission conforms to the journal’s requirements.
+For creating manuscripts in LaTex, The Economic Journal strongly recommends the use of its TeX template which is downloadable at: [h9https://bit.ly/3g2YBaB)]
+
+#### Step 2: Submission of Replication Package via file request link
+
+*After* having received your final version of paper and appendices together with the signed checklist on Editorial Express (Step 1 above), our data editor will initiate the replication checks process by sending you a file request link, where you will be able to upload your replication package, as soon as your are ready to do so.
+
+*Before* you start to prepare your replication package, please consult the EJ Data Editor website for comprehensive guidance and step-by-step instructions: [https://ejdataeditor.github.io](https://ejdataeditor.github.io).
+
+
+#### Further Steps
+
+Once I have received all supporting documents along with confirmation that the paper has passed the appropriate checks, I will formally accept the paper for publication. At which point, the paper can be listed as “forthcoming” and your files will be sent to Oxford University Press for production.
+Now is also a good time to update the information on your website about the paper and inform the authors you are, or will be, citing in the paper. It is now in your and our best interest to increase the impact of your paper as much as possible.
+
+Thank you very much for your contribution to the Economic Journal. I look forward to seeing it in print.
+
+Sincerely,
+
+Your Managing Editor
