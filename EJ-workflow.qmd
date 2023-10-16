@@ -241,11 +241,11 @@ The `DE` takes care of logging the fields concerning resubmission date:
 
 ![`EO` sets status to *Not Transferred* Status](img/step6.png)
 
-## Step 7. Editorial Office: Request `Zenodo` Upload
+## Step 7. Data Editor: Request `Zenodo` Upload
 
-`EO` sends an email to the authors via `EE` (copying {{< var de.first >}} and {{< var pm.first >}}) with a request to upload the package to the [`EJ` community at Zenodo](https://zenodo.org/communities/ej-replication-repository), as indicated on the [DE's website](https://ejdataeditor.github.io/package). 
+`DE` sends an email to the authors via `EE` (copying `EO` and {{< var pm.first >}}) with a request to upload the package to the [`EJ` community at Zenodo](https://zenodo.org/communities/ej-replication-repository), as indicated on the [DE's website](https://ejdataeditor.github.io/package). 
 
-`EO` adds an important reminder for the authors in their message:
+`DE` adds an important reminder for the authors in their message:
 
 ::: {.callout-warning}
 # Important Reminder: No Further Modifications of Replication Package!
@@ -322,7 +322,7 @@ For creating manuscripts in LaTex, The Economic Journal strongly recommends the 
 
 #### Step 2: Submission of Replication Package via file request link
 
-*After* having received your final version of paper and appendices together with the signed checklist on Editorial Express (Step 1 above), our data editor will initiate the replication checks process by sending you a file request link, where you will be able to upload your replication package, as soon as your are ready to do so.
+*After* having received your final version of paper and appendices together with the signed checklist on Editorial Express (Step 1 above), our data editor will initiate the replication checks process by sending you a file request link, where you will be able to upload your replication package, as soon as you are ready to do so.
 
 *Before* you start to prepare your replication package, please consult the EJ Data Editor website for comprehensive guidance and step-by-step instructions: [https://ejdataeditor.github.io](https://ejdataeditor.github.io).
 
