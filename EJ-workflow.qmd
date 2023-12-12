@@ -183,6 +183,15 @@ In short, the Replicator fills out the part of the `SS` shown in figure @fig-che
 
 ![Replicator fills out spreadsheet after completion of checks.](img/rep-excel.png){#fig-checkout}
 
+### Replicator: Confidential Data Access
+
+Some packages cannot share their data with us, not even in a dedicated folder `4-confidential-data-not-for-publication.zip`. What do we do in this case?
+
+1. If the authors provide instructions on how to obtain *direct* access to the data via some procedure with a data provider, we investigate and try to gain access. This has a time limit of 30 minutes. In other words, if within 30 minutes you have not understood whether you can get access and filled out any required forms, we abort. This clearly removes CASD access for instance, or similar systems where strict vetting of users is necessary.
+2. If we cannot gain direct access, we try to get access to the author's computer to perform the replication check there. We can use zoom remote control or teamviewer or any other remote connection technology.
+3. Alternatively, the data provider offers third party certification services, and performs the checks for us on their secure data.
+
+
 ### Replicator: Precise Guidelines
 
 This section provides some guidelines for what a replicator should look out for in a package, and things which may be included in their report to the `DE`.
