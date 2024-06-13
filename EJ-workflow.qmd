@@ -190,6 +190,7 @@ Some packages cannot share their data with us, not even in a dedicated folder `4
 1. If the authors provide instructions on how to obtain *direct* access to the data via some procedure with a data provider, we investigate and try to gain access. This has a time limit of 30 minutes. In other words, if within 30 minutes you have not understood whether you can get access and filled out any required forms, we abort. This clearly removes CASD access for instance, or similar systems where strict vetting of users is necessary.
 2. If we cannot gain direct access, we try to get access to the author's computer to perform the replication check there. We can use zoom remote control or teamviewer or any other remote connection technology.
 3. Alternatively, the data provider offers third party certification services, and performs the checks for us on their secure data.
+4. Finally, if none of the above works, we require that the authors provide a simulated version of their data such that we can at least check that the code runs. The DE will negotiate with the authors about those points.
 
 
 ### Replicator: Precise Guidelines
@@ -211,6 +212,11 @@ This section provides some guidelines for what a replicator should look out for 
 | Table 1 | `output/tables/table1.tex` |  `code/table1.do` |
 | Figure 1 | `output/plots/figure1.pdf` |  `code/figure1.do` |
 | Figure 2 | `output/plots/figure2.pdf` |  `code/figure2.do` |
+
+
+### Replicator: Performing Replication Step-by-step example
+
+There is a step by step guide contained on the readme of the [EJ Report Template](https://github.com/RES-Reproducibility/EJ-report-template).
 
 
 
