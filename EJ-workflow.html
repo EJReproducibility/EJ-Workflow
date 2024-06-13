@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.310">
+<meta name="generator" content="quarto-1.4.550">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Florian Oswald">
-<meta name="dcterms.date" content="2023-10-16">
+<meta name="dcterms.date" content="2024-06-13">
 
 <title>RES Reproducibility Checks: Workflow</title>
 <style>
@@ -24,7 +24,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -84,7 +84,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#purpose-of-this-document" id="toc-purpose-of-this-document" class="nav-link active" data-scroll-target="#purpose-of-this-document">Purpose of this document</a></li>
   <li><a href="#workflow-in-detail" id="toc-workflow-in-detail" class="nav-link" data-scroll-target="#workflow-in-detail">Workflow in Detail</a></li>
   <li><a href="#step-1.-editorial-office-acquisition-of-final-version-and-logging" id="toc-step-1.-editorial-office-acquisition-of-final-version-and-logging" class="nav-link" data-scroll-target="#step-1.-editorial-office-acquisition-of-final-version-and-logging">Step 1. Editorial Office: Acquisition of Final Version and Logging</a></li>
-  <li><a href="#step-2.-data-editor-var-de.first-acquisition-of-package" id="toc-step-2.-data-editor-var-de.first-acquisition-of-package" class="nav-link" data-scroll-target="#step-2.-data-editor-var-de.first-acquisition-of-package">Step 2. Data Editor (Florian): Acquisition of package</a></li>
+  <li><a href="#step-2.-data-editor-acquisition-of-package" id="toc-step-2.-data-editor-acquisition-of-package" class="nav-link" data-scroll-target="#step-2.-data-editor-acquisition-of-package">Step 2. Data Editor (Florian): Acquisition of package</a></li>
   <li><a href="#step-3.-data-editor-replicator-assigment" id="toc-step-3.-data-editor-replicator-assigment" class="nav-link" data-scroll-target="#step-3.-data-editor-replicator-assigment">Step 3. Data Editor: Replicator Assigment</a></li>
   <li><a href="#step-4.-replicators" id="toc-step-4.-replicators" class="nav-link" data-scroll-target="#step-4.-replicators">Step 4. Replicators</a>
   <ul class="collapse">
@@ -92,7 +92,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#replicator-skills" id="toc-replicator-skills" class="nav-link" data-scroll-target="#replicator-skills">Replicator Skills</a></li>
   <li><a href="#replicator-timeline" id="toc-replicator-timeline" class="nav-link" data-scroll-target="#replicator-timeline">Replicator Timeline</a></li>
   <li><a href="#replicator-workflow" id="toc-replicator-workflow" class="nav-link" data-scroll-target="#replicator-workflow">Replicator Workflow</a></li>
+  <li><a href="#replicator-confidential-data-access" id="toc-replicator-confidential-data-access" class="nav-link" data-scroll-target="#replicator-confidential-data-access">Replicator: Confidential Data Access</a></li>
   <li><a href="#replicator-precise-guidelines" id="toc-replicator-precise-guidelines" class="nav-link" data-scroll-target="#replicator-precise-guidelines">Replicator: Precise Guidelines</a></li>
+  <li><a href="#replicator-performing-replication-step-by-step-example" id="toc-replicator-performing-replication-step-by-step-example" class="nav-link" data-scroll-target="#replicator-performing-replication-step-by-step-example">Replicator: Performing Replication Step-by-step example</a></li>
   </ul></li>
   <li><a href="#step-5.-data-editor-decision" id="toc-step-5.-data-editor-decision" class="nav-link" data-scroll-target="#step-5.-data-editor-decision">Step 5. Data Editor Decision</a></li>
   <li><a href="#step-6-package-resubmissions---eo-and-de" id="toc-step-6-package-resubmissions---eo-and-de" class="nav-link" data-scroll-target="#step-6-package-resubmissions---eo-and-de">Step 6: Package Resubmissions - <code>EO</code> and <code>DE</code></a></li>
@@ -123,7 +125,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 16, 2023</p>
+      <p class="date">June 13, 2024</p>
     </div>
   </div>
   
@@ -131,9 +133,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
   
 
+
 </header>
 
-<p><img src="img/banner.png" class="img-fluid" data-fig-align="top"> <br> <br> <strong>Version History:</strong></p>
+
+<p><img src="img/banner.png" class="img-fluid quarto-figure quarto-figure-top"> <br> <br> <strong>Version History:</strong></p>
 <p>v1: The bulk of this was the work of <a href="https://joanllull.github.io/">Joan Llull</a>.<br>
 v1.1: Minor additions by <a href="https://floswald.github.io/">Florian Oswald</a>.<br>
 v1.2: Updates and comments from Brooke Sperry<br>
@@ -143,7 +147,7 @@ v1.4: Updates and comments from Brooke Sperry</p>
 <ol type="1">
 <li>Update Guidelines <a href="https://bit.ly/3ivH38d">https://bit.ly/3ivH38d</a></li>
 <li>Update Checklist <a href="https://bit.ly/3Qa0HW5">https://bit.ly/3Qa0HW5</a></li>
-<li>Update conditional acceptance template messages of all <code>ME</code>s (see <a href="#sec-app">Section&nbsp;11</a>)</li>
+<li>Update conditional acceptance template messages of all <code>ME</code>s (see <a href="#sec-app" class="quarto-xref">Section&nbsp;11</a>)</li>
 <li>Do exactly the same for <code>EctJ</code> <code>ME</code>s.</li>
 </ol>
 <section id="purpose-of-this-document" class="level2">
@@ -226,7 +230,7 @@ v1.4: Updates and comments from Brooke Sperry</p>
 </section>
 <section id="workflow-in-detail" class="level2">
 <h2 class="anchored" data-anchor-id="workflow-in-detail">Workflow in Detail</h2>
-<p>Let us proceed chronologically. The paper has just been <em>conditionally accepted</em> by the managing author (<code>ME</code>) - see the proposed message template in appendix <a href="#sec-app">Section&nbsp;11</a>.</p>
+<p>Let us proceed chronologically. The paper has just been <em>conditionally accepted</em> by the managing author (<code>ME</code>) - see the proposed message template in appendix <a href="#sec-app" class="quarto-xref">Section&nbsp;11</a>.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -244,18 +248,22 @@ Note
 <section id="step-1.-editorial-office-acquisition-of-final-version-and-logging" class="level2">
 <h2 class="anchored" data-anchor-id="step-1.-editorial-office-acquisition-of-final-version-and-logging">Step 1. Editorial Office: Acquisition of Final Version and Logging</h2>
 <ol type="1">
-<li>After conditional acceptance by the <code>ME</code>, <code>EO</code> waits on <code>HT</code> until the required zip file arrives. See the template for conditional acceptance of <code>ME</code> for what the required contents are in <a href="#sec-app">Section&nbsp;11</a>. (<em>paper, appendices and checklist</em>). If contents are missing, cycle back to authors until correct and signed. Having those files on <code>EE</code> serves the purpose of having a master version of the accepted paper on record, against which we can check the paper after potentially several rounds of replication checks.</li>
-<li>After successful arrival of <em>paper, appendices and checklist</em> on <code>EE</code>, <code>EO</code> logs the paper’s metadata in our shared googlesheet <code>SS</code>, filling all fields as shown in figure <a href="#fig-logmetadata">Figure&nbsp;1</a> (leaving the rest empty). Upon turning blue, the googlesheet will send an automated message to the Data Editor (Florian) - no further action on behalf of <code>EO</code> is required.</li>
+<li>After conditional acceptance by the <code>ME</code>, <code>EO</code> waits on <code>HT</code> until the required zip file arrives. See the template for conditional acceptance of <code>ME</code> for what the required contents are in <a href="#sec-app" class="quarto-xref">Section&nbsp;11</a>. (<em>paper, appendices and checklist</em>). If contents are missing, cycle back to authors until correct and signed. Having those files on <code>EE</code> serves the purpose of having a master version of the accepted paper on record, against which we can check the paper after potentially several rounds of replication checks.</li>
+<li>After successful arrival of <em>paper, appendices and checklist</em> on <code>EE</code>, <code>EO</code> logs the paper’s metadata in our shared googlesheet <code>SS</code>, filling all fields as shown in figure <a href="#fig-logmetadata" class="quarto-xref">Figure&nbsp;1</a> (leaving the rest empty). Upon turning blue, the googlesheet will send an automated message to the Data Editor (Florian) - no further action on behalf of <code>EO</code> is required.</li>
 </ol>
-<div id="fig-logmetadata" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="img/step0.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;1: <code>EO</code> logs meta data of replication package.</figcaption><p></p>
+<div id="fig-logmetadata" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-logmetadata-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/step0.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-logmetadata-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: <code>EO</code> logs meta data of replication package.
+</figcaption>
 </figure>
 </div>
 </section>
-<section id="step-2.-data-editor-var-de.first-acquisition-of-package" class="level2">
-<h2 class="anchored" data-anchor-id="step-2.-data-editor-var-de.first-acquisition-of-package">Step 2. Data Editor (Florian): Acquisition of package</h2>
+<section id="step-2.-data-editor-acquisition-of-package" class="level2">
+<h2 class="anchored" data-anchor-id="step-2.-data-editor-acquisition-of-package">Step 2. Data Editor (Florian): Acquisition of package</h2>
 <p>Florian receives an automated message that a new paper has arrived which needs to be checked for reproducibility. He creates a new folder inside the shared dropbox folder <code>EJ-2-submitted-replication-packages</code> (<code>EctJ-2-submitted-replication-packages</code> for <code>EctJ</code>) named with the main author’s last name and their MS number, and <em>sends a file request link to the author via email</em>. In practice, the folder is named like</p>
 <pre><code>Smith-XXXXXXXX-R1</code></pre>
 <p>for <em>round 1</em>.</p>
@@ -278,18 +286,26 @@ Note
 <li>Checker: pick one of the available replicators</li>
 <li>Date assigned: the date at which this Replicator Assignment is performed.</li>
 </ol>
-<p>After those fields have been entered, the Data Editor section of the spreadsheet turns white, and the replicator’s part turns <span style="background-color:green;">green</span>. Florian usually sends a short email to the replicator indicating that a new paper has been assigned, but it is the job of the replicators to regularly check whether they have papers assigned. This is illustrated in figure <a href="#fig-logmeta">Figure&nbsp;2</a>.</p>
-<div id="fig-logmeta" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="img/step2.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;2: <code>DE</code> logs meta data of replication package.</figcaption><p></p>
+<p>After those fields have been entered, the Data Editor section of the spreadsheet turns white, and the replicator’s part turns <span style="background-color:green;">green</span>. Florian usually sends a short email to the replicator indicating that a new paper has been assigned, but it is the job of the replicators to regularly check whether they have papers assigned. This is illustrated in figure <a href="#fig-logmeta" class="quarto-xref">Figure&nbsp;2</a>.</p>
+<div id="fig-logmeta" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-logmeta-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/step2.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-logmeta-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: <code>DE</code> logs meta data of replication package.
+</figcaption>
 </figure>
 </div>
-<p>He then leaves a note on <code>EE</code> as shown in figure <a href="#fig-acqui">Figure&nbsp;3</a>. Notice that this happens <em>after the article has been assigned to replicators</em>!</p>
-<div id="fig-acqui" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="img/step1.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3: Acquisition of Replication Package from <code>EE</code> <code>HT</code> on behalf of the <code>DE</code>. Notice manual addition of comment.</figcaption><p></p>
+<p>He then leaves a note on <code>EE</code> as shown in figure <a href="#fig-acqui" class="quarto-xref">Figure&nbsp;3</a>. Notice that this happens <em>after the article has been assigned to replicators</em>!</p>
+<div id="fig-acqui" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-acqui-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/step1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-acqui-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Acquisition of Replication Package from <code>EE</code> <code>HT</code> on behalf of the <code>DE</code>. Notice manual addition of comment.
+</figcaption>
 </figure>
 </div>
 </section>
@@ -334,12 +350,16 @@ Where Do I signal my Software Skills?
 <h3 class="anchored" data-anchor-id="replicator-timeline">Replicator Timeline</h3>
 <ul>
 <li>As noted above, the day a paper is assigned to a replicator, their section of the google sheet becomes <span style="background-color:green;">green</span>. Five days after the paper has been assigned to the replicator, it automatically turns <span style="background-color:yellow;">yellow</span>, and 10 days after assignment it turns <span style="background-color:red;">red</span>.</li>
-<li>Our target is for the replicator to <strong>complete any given package within 7 days</strong>. The color scheme is supposed to help replicators manage this deadline, see figure <a href="#fig-time">Figure&nbsp;4</a>.</li>
+<li>Our target is for the replicator to <strong>complete any given package within 7 days</strong>. The color scheme is supposed to help replicators manage this deadline, see figure <a href="#fig-time" class="quarto-xref">Figure&nbsp;4</a>.</li>
 </ul>
-<div id="fig-time" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="img/step4.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;4: Replicator Timing indicator</figcaption><p></p>
+<div id="fig-time" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-time-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/step4.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-time-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Replicator Timing indicator
+</figcaption>
 </figure>
 </div>
 </section>
@@ -372,13 +392,27 @@ Where Do I signal my Software Skills?
 </ul></li>
 <li>Replicator turns switch <code>Status</code> from <em>A</em> (assigned) to <em>B</em> (back to DE)</li>
 </ol>
-<p>In short, the Replicator fills out the part of the <code>SS</code> shown in figure <a href="#fig-checkout">Figure&nbsp;5</a>.</p>
-<div id="fig-checkout" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="img/rep-excel.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;5: Replicator fills out spreadsheet after completion of checks.</figcaption><p></p>
+<p>In short, the Replicator fills out the part of the <code>SS</code> shown in figure <a href="#fig-checkout" class="quarto-xref">Figure&nbsp;5</a>.</p>
+<div id="fig-checkout" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-checkout-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/rep-excel.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-checkout-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Replicator fills out spreadsheet after completion of checks.
+</figcaption>
 </figure>
 </div>
+</section>
+<section id="replicator-confidential-data-access" class="level3">
+<h3 class="anchored" data-anchor-id="replicator-confidential-data-access">Replicator: Confidential Data Access</h3>
+<p>Some packages cannot share their data with us, not even in a dedicated folder <code>4-confidential-data-not-for-publication.zip</code>. What do we do in this case?</p>
+<ol type="1">
+<li>If the authors provide instructions on how to obtain <em>direct</em> access to the data via some procedure with a data provider, we investigate and try to gain access. This has a time limit of 30 minutes. In other words, if within 30 minutes you have not understood whether you can get access and filled out any required forms, we abort. This clearly removes CASD access for instance, or similar systems where strict vetting of users is necessary.</li>
+<li>If we cannot gain direct access, we try to get access to the author’s computer to perform the replication check there. We can use zoom remote control or teamviewer or any other remote connection technology.</li>
+<li>Alternatively, the data provider offers third party certification services, and performs the checks for us on their secure data.</li>
+<li>Finally, if none of the above works, we require that the authors provide a simulated version of their data such that we can at least check that the code runs. The DE will negotiate with the authors about those points.</li>
+</ol>
 </section>
 <section id="replicator-precise-guidelines" class="level3">
 <h3 class="anchored" data-anchor-id="replicator-precise-guidelines">Replicator: Precise Guidelines</h3>
@@ -422,6 +456,10 @@ Where Do I signal my Software Skills?
 </tbody>
 </table>
 </section>
+<section id="replicator-performing-replication-step-by-step-example" class="level3">
+<h3 class="anchored" data-anchor-id="replicator-performing-replication-step-by-step-example">Replicator: Performing Replication Step-by-step example</h3>
+<p>There is a step by step guide contained on the readme of the <a href="https://github.com/RES-Reproducibility/EJ-report-template">EJ Report Template</a>.</p>
+</section>
 </section>
 <section id="step-5.-data-editor-decision" class="level2">
 <h2 class="anchored" data-anchor-id="step-5.-data-editor-decision">Step 5. Data Editor Decision</h2>
@@ -440,23 +478,31 @@ Where Do I signal my Software Skills?
 </ol>
 <p><strong>Internally</strong>, we follow the same steps as with first time submissions:</p>
 <ol type="1">
-<li><code>EO</code> logs the return of package upon receiving the letter on <code>EE</code> by copying the first 9 cells of the rejected version of the paper, and pasting it at the bottom of the spreadsheet, incrementing the <code>Round</code> field by 1, and logging the correct <code>arrival date EE</code>, as shown in figure <a href="#fig-revision">Figure&nbsp;6</a>.</li>
+<li><code>EO</code> logs the return of package upon receiving the letter on <code>EE</code> by copying the first 9 cells of the rejected version of the paper, and pasting it at the bottom of the spreadsheet, incrementing the <code>Round</code> field by 1, and logging the correct <code>arrival date EE</code>, as shown in figure <a href="#fig-revision" class="quarto-xref">Figure&nbsp;6</a>.</li>
 <li>The <code>DE</code> is again alerted automatically and sends the file request link to the authors.</li>
 </ol>
-<div id="fig-revision" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="img/step-revision.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;6: <code>EO</code> logs resubmitted paper</figcaption><p></p>
+<div id="fig-revision" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-revision-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/step-revision.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-revision-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: <code>EO</code> logs resubmitted paper
+</figcaption>
 </figure>
 </div>
 <p>The <code>DE</code> takes care of logging the fields concerning resubmission date:</p>
 <ul>
-<li>In case a package is resubmitted for the first time, the date of re-submission will be included to close this entry, and a new entry (<em>row</em>) will be created with revision number equal 2. If the re-submission is a minor comment, Florian changes the Status as described below but do not change the code of the Decision section. If the initial outcome of this iteration is already accept, mark the code as “A”, and introduce the current date also as re-submission date, as in figure <a href="#fig-resub">Figure&nbsp;7</a>.</li>
+<li>In case a package is resubmitted for the first time, the date of re-submission will be included to close this entry, and a new entry (<em>row</em>) will be created with revision number equal 2. If the re-submission is a minor comment, Florian changes the Status as described below but do not change the code of the Decision section. If the initial outcome of this iteration is already accept, mark the code as “A”, and introduce the current date also as re-submission date, as in figure <a href="#fig-resub" class="quarto-xref">Figure&nbsp;7</a>.</li>
 </ul>
-<div id="fig-resub" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="img/step5.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;7: Acceptance Decisions of the <code>DE</code> upon resubmission.</figcaption><p></p>
+<div id="fig-resub" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-resub-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/step5.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-resub-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: Acceptance Decisions of the <code>DE</code> upon resubmission.
+</figcaption>
 </figure>
 </div>
 <ul>
@@ -465,7 +511,7 @@ Where Do I signal my Software Skills?
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/step5.5.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption"><code>DE</code> sets status to <em>Acceptable Package</em></figcaption><p></p>
+<figcaption><code>DE</code> sets status to <em>Acceptable Package</em></figcaption>
 </figure>
 </div>
 <ul>
@@ -474,7 +520,7 @@ Where Do I signal my Software Skills?
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/step6.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption"><code>EO</code> sets status to <em>Not Transferred</em> Status</figcaption><p></p>
+<figcaption><code>EO</code> sets status to <em>Not Transferred</em> Status</figcaption>
 </figure>
 </div>
 </section>
@@ -497,7 +543,16 @@ Important Reminder: No Further Modifications of Replication Package!
 </div>
 <p>This reminder is also on the <code>DE</code>’s website.</p>
 <p>This <em>digital fingerprint</em> is the so-called <a href="https://en.wikipedia.org/wiki/Md5sum"><code>md5sum</code></a>, which can be used to compute a unique <em>checksum</em> of a set of data. This technology is widely used in (open source) software distribution, in order to certify integrity of downloaded software. For example, each <code>R</code> package has an associated <code>md5 checksum</code>. On <code>zenodo</code>, this is displayed as follows:</p>
-<p><img src="img/md5.png" id="fig-md5" class="img-fluid"></p>
+<div id="fig-md5" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-md5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/md5.png" id="fig-md5" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-md5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8
+</figcaption>
+</figure>
+</div>
 <p>We will compute our version of the <code>md5</code> string on the finally accepted version of the replication package, located here in the shared <code>DB</code>:</p>
 <pre><code>
 ├── EJ-2-submitted-replication-packages
@@ -528,7 +583,7 @@ Importance of initial folder structure
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/step7.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Setting of Status to <em>P</em> (published) after transfer to the publisher OUP by <code>EO</code></figcaption><p></p>
+<figcaption>Setting of Status to <em>P</em> (published) after transfer to the publisher OUP by <code>EO</code></figcaption>
 </figure>
 </div>
 </section>
@@ -644,10 +699,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -657,8 +711,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -671,6 +734,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -714,6 +896,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -739,6 +922,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -799,6 +1008,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 
