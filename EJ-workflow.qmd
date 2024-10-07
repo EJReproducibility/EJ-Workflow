@@ -68,6 +68,24 @@ This document describes the current workflow for reproducibility checks at `EJ` 
 
 ## Workflow in Detail
 
+```{mermaid}
+%%| echo: false
+%%| fig-cap: "Overview of EJ Reproducibility Operations"
+flowchart TD
+    A(Editorial Office\nlogs conditionally\naccepted papers)-->|via google form| B(gsheet: new arrivals)
+    B-->|DE email notified| CC[DE sends file request]
+    CC-->  C(database:\ndate_with_authos\nstatus=with_authors\nround+=1\nfile_request_id )
+    C--> E(package arrives on dropbox)
+    E-->|DE email notified| F[Assign to replicators]
+    F-->|return via gform| G{DE checks report\n and decides}
+
+    G-->|accept| H[Ask for zenodo submission]
+    H-->|email notify| I[check md5]
+    I--> J[log DOI,\n export papers table\nnotify authors and EO]
+
+    G-->|reject| CC
+```
+
 Let us proceed chronologically. The paper has just been *conditionally accepted* by the managing author (`ME`) - see the proposed message template in appendix @sec-app.
 
 ::: {.callout-note}
